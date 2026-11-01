@@ -1,0 +1,12 @@
+# systemd user unit. Install as ~/.config/systemd/user/restore-drill.service
+[Unit]
+Description=Restore drill: prove the newest backups restore
+
+[Service]
+Type=oneshot
+# %h is your home directory. Adjust the node path, checkout path and config path.
+ExecStart=/usr/bin/node %h/restore-drill/bin/restore-drill.mjs run --config %h/.config/restore-drill/drills.json --state %h/.local/state/restore-drill
+# Private /tmp: restored data cannot be seen by other units and vanishes with the service.
+PrivateTmp=yes
+Nice=10
+IOSchedulingClass=idle

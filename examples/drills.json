@@ -1,0 +1,97 @@
+{
+  "_comment": "restore-drill config. Keys starting with an underscore are comments. Relative paths resolve against this file. Run: restore-drill run",
+  "state": ".restore-drill",
+  "defaults": {
+    "_comment": "Applied to every drill that supports the option, unless the drill sets its own.",
+    "timeout": "10m"
+  },
+  "notify": {
+    "_comment": "All optional. A webhook gets JSON on failure and on recovery. ping_* are healthchecks.io style GETs. ntfy is a topic URL.",
+    "webhook": "https://example.invalid/hooks/restore-drill",
+    "ping_success": "https://hc-ping.example.invalid/your-uuid",
+    "ping_fail": "https://hc-ping.example.invalid/your-uuid/fail",
+    "ntfy": "https://ntfy.example.invalid/restore-drill"
+  },
+  "drills": [
+    {
+      "_comment": "file: newest match must exist, be non-empty, recent, and not much smaller than the last good run.",
+      "name": "app-dump",
+      "type": "file",
+      "source": "/backups/app/*.sql.gz",
+      "max_age": "26h",
+      "min_size": "10KB",
+      "size_drop": 50
+    },
+    {
+      "_comment": "sqlite: a private copy is opened read-only; integrity_check must pass, then your checks.",
+      "name": "app-db",
+      "type": "sqlite",
+      "source": "/backups/app/*.db",
+      "max_age": "26h",
+      "table_exists": [
+        "users"
+      ],
+      "checks": [
+        {
+          "sql": "SELECT count(*) FROM users",
+          "min": 1
+        }
+      ]
+    },
+    {
+      "_comment": "sqlite behind age encryption and gzip. Steps run in this order: decrypt, decompress, check.",
+      "name": "vault-db",
+      "type": "sqlite",
+      "source": "/backups/vault/*.db.gz.age",
+      "decrypt": {
+        "type": "age",
+        "identity": "/etc/restore-drill/age-identity.txt"
+      },
+      "decompress": true,
+      "max_age": "26h",
+      "table_exists": "items"
+    },
+    {
+      "_comment": "tar: list, extract to a temp dir, then require these paths (globs allowed). .zip works too.",
+      "name": "site-files",
+      "type": "tar",
+      "source": "/backups/site/*.tar.gz",
+      "max_age": "26h",
+      "expect_paths": [
+        "config/app.json",
+        "uploads/*"
+      ],
+      "min_files": 10
+    },
+    {
+      "_comment": "restic: restores the latest snapshot into a temp dir, then restic check --read-data-subset. source is the repository. Paths are as stored in the snapshot, without the leading slash.",
+      "name": "nas-restic",
+      "type": "restic",
+      "source": "/mnt/nas/restic-repo",
+      "password_file": "/etc/restore-drill/restic-password",
+      "include": [
+        "/srv/app"
+      ],
+      "expect_paths": [
+        "srv/app/config.json"
+      ],
+      "read_data_subset": "5%",
+      "max_age": "26h"
+    },
+    {
+      "_comment": "pg_dump: pg_restore --list must work. restore_url (optional) points at a scratch server; a throwaway database is created there and dropped afterwards.",
+      "name": "postgres",
+      "type": "pg_dump",
+      "source": "/backups/postgres/*.dump",
+      "max_age": "26h",
+      "min_entries": 20
+    },
+    {
+      "_comment": "command: anything else. Runs in a private temp dir ($RESTORE_DRILL_TMP). With a source, $RESTORE_DRILL_FILE is a private copy of the newest backup. Pass on exit 0.",
+      "name": "custom-check",
+      "type": "command",
+      "source": "/backups/app/*.db",
+      "command": "sqlite3 \"$RESTORE_DRILL_FILE\" \"SELECT count(*) FROM users\" | grep -qv \"^0$\""
+    }
+  ]
+}

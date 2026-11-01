@@ -1,0 +1,14 @@
+# systemd user timer. Install as ~/.config/systemd/user/restore-drill.timer
+# Enable: systemctl --user enable --now restore-drill.timer
+# Keep timers firing while logged out: loginctl enable-linger "$USER"
+[Unit]
+Description=Nightly restore drill
+
+[Timer]
+# Run after your backups finish, not at the same minute.
+OnCalendar=*-*-* 04:30:00
+RandomizedDelaySec=10m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

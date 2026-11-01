@@ -1,0 +1,20 @@
+# One-shot service. Run it from a host timer or cron:
+#   docker compose run --rm restore-drill
+services:
+  restore-drill:
+    build:
+      context: ..
+      dockerfile: examples/Dockerfile
+    restart: "no"
+    volumes:
+      - ./drills.json:/config/drills.json:ro
+      - /backups:/backups:ro          # backups are mounted read-only
+      - restore-drill-state:/state
+    # Optional: secrets for restic or notifications
+    # environment:
+    #   RESTIC_PASSWORD_FILE: /run/secrets/restic
+    tmpfs:
+      - /tmp:size=2g                  # restores land here, sized for your largest backup
+
+volumes:
+  restore-drill-state:
