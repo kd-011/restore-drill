@@ -4,6 +4,8 @@ Backups that have never been restored are a hope, not a backup. restore-drill fi
 
 Zero dependencies. Node 22 and the tools you already use (`tar`, `age`, `restic`, `pg_restore`). Developed and tested on Linux; no daemon, no database.
 
+![restore-drill demo: two backups pass, two broken ones fail with the real tool error](docs/screenshots/terminal.png)
+
 ## 30-second demo
 
 ```sh
