@@ -158,7 +158,7 @@ Restores land in the OS temp dir (`TMPDIR`). Point `TMPDIR` somewhere with room,
 
 ### pg_dump
 
-Newest dump (custom or directory format). `pg_restore --list` must succeed and list at least `min_entries` entries (default 1).
+Newest dump file (custom format; directory-format dumps are not picked up yet). `pg_restore --list` must succeed and list at least `min_entries` entries (default 1).
 
 ```json
 { "name": "postgres", "type": "pg_dump", "source": "/backups/postgres/*.dump",
@@ -249,7 +249,7 @@ Each result is one line in `<state>/history.jsonl`:
 
 ## Safety guarantees
 
-- **Sources are read-only.** A drill never opens, writes, renames or deletes the original. Checks that need to open a file work on a private copy in the temp dir. The restic drill uses `--no-lock` so it does not even write lock files to the repository. Tests hash the backup directory before and after every drill type, and run against a read-only directory.
+- **Sources are read-only.** A drill never opens, writes, renames or deletes the original. Checks that need to open a file work on a private copy in the temp dir. The restic drill uses `--no-lock` so it does not even write lock files to the repository. Tests hash the backup directory before and after the sqlite, tar, file and command drills, and run them against a read-only directory.
 - **Temp dirs are private and always removed.** Each attempt gets its own directory under the OS temp dir (`TMPDIR`), mode 700, removed on success, on failure, on timeout, and on Ctrl-C or SIGTERM. Child processes run in their own process group and are killed with the drill.
 - **Secrets are not printed.** Credentials in URLs and known secret values (restic password, database password) are masked in output and in `history.jsonl`. Notification URLs never appear in output.
 - **Errors are the tool's own.** A failed drill shows the real error text from `tar`, `restic`, SQLite and the rest, not a generic message.
