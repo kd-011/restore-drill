@@ -1,0 +1,30 @@
+name: Bug report
+description: A drill passed or failed when it should not have, or something differs from the README
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The command you ran and its full output. Remove any passwords or hostnames you do not want public.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: The drill config
+      description: The drill entry from drills.json, with secrets removed.
+      render: json
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The restore-drill version from package.json, and the output of `node --version`.
+    validations:
+      required: true

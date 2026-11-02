@@ -35,14 +35,38 @@ test('no personal data or em dashes anywhere in the tree', { skip: !inRepo }, ()
   assert.deepEqual(hits, []);
 });
 
+// Two kinds of commit are made by GitHub, not by this repo's author: a Dependabot
+// update (author dependabot[bot]) and anything merged with the web UI or auto-merge
+// (committer GitHub). Both carry no personal address. Dependabot's message body is
+// third-party release notes, so only the identity is checked for those.
+export function commitProblems({ an, ae, cn, body }) {
+  const bot = an === 'dependabot[bot]';
+  const problems = [];
+  if (an !== 'KD011' && !bot) problems.push(`author ${an}`);
+  if (cn !== 'KD011' && cn !== 'GitHub') problems.push(`committer ${cn}`);
+  if (!bot && !/@users\.noreply\.github\.com$/.test(ae)) problems.push(`email ${ae}`);
+  if (!bot && /claude|anthropic|co-authored-by|generated with/i.test(body)) problems.push('AI trailer');
+  if (!bot && body.includes(EM_DASH)) problems.push('em dash');
+  return problems;
+}
+
 test('every commit is authored by the public identity with no AI trailers', { skip: !inRepo }, () => {
   const log = git('log', '--format=%an%x1f%ae%x1f%cn%x1f%B%x1e').stdout;
   for (const entry of log.split('\x1e').map((e) => e.trim()).filter(Boolean)) {
     const [an, ae, cn, body] = entry.split('\x1f');
-    assert.equal(an, 'KD011');
-    assert.equal(cn, 'KD011');
-    assert.match(ae, /@users\.noreply\.github\.com$/);
-    assert.doesNotMatch(body, /claude|anthropic|co-authored-by|generated with/i);
-    assert.doesNotMatch(body, new RegExp(EM_DASH));
+    assert.deepEqual(commitProblems({ an, ae, cn, body }), [], body.split('\n')[0]);
   }
+});
+
+test('commit identity rule: bots and web merges pass, anyone else does not', () => {
+  const ok = { an: 'KD011', ae: '1+kd-011@users.noreply.github.com', cn: 'KD011', body: 'Fix a thing' };
+  assert.deepEqual(commitProblems(ok), []);
+  assert.deepEqual(commitProblems({ ...ok, cn: 'GitHub' }), []);
+  assert.deepEqual(commitProblems({ an: 'dependabot[bot]', ae: 'x@users.noreply.github.com', cn: 'GitHub', body: `notes ${EM_DASH}` }), []);
+  assert.notDeepEqual(commitProblems({ ...ok, an: 'Someone Else' }), []);
+  assert.notDeepEqual(commitProblems({ ...ok, ae: 'person@example.com' }), []);
+  assert.notDeepEqual(commitProblems({ ...ok, cn: 'Someone Else' }), []);
+  assert.notDeepEqual(commitProblems({ ...ok, body: 'Co-Authored-By: a bot' }), []);
+  assert.notDeepEqual(commitProblems({ ...ok, body: `a ${EM_DASH} b` }), []);
+  assert.notDeepEqual(commitProblems({ an: 'dependabot[bot]', ae: 'x@users.noreply.github.com', cn: 'Someone Else', body: '' }), []);
 });

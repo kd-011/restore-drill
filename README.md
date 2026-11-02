@@ -1,5 +1,7 @@
 # restore-drill
 
+[![ci](https://github.com/kd-011/restore-drill/actions/workflows/ci.yml/badge.svg)](https://github.com/kd-011/restore-drill/actions/workflows/ci.yml)
+
 Backups that have never been restored are a hope, not a backup. restore-drill finds your newest backup, restores it into a throwaway temp dir, runs a sanity check, and records pass or fail with a timestamp, so a silently broken backup is caught the night it breaks, not the day you need it.
 
 Zero dependencies. Node 22 and the tools you already use (`tar`, `age`, `restic`, `pg_restore`). Developed and tested on Linux; no daemon, no database.
