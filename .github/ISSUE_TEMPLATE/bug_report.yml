@@ -1,12 +1,12 @@
 name: Bug report
-description: A drill passed or failed when it should not have, or something differs from the README
+description: A drill passed or failed when it shouldn't have, or something doesn't match the README
 labels: [bug]
 body:
   - type: textarea
     id: what
     attributes:
       label: What happened
-      description: The command you ran and its full output. Remove any passwords or hostnames you do not want public.
+      description: The command you ran and its full output. Take out any passwords or hostnames you don't want public.
     validations:
       required: true
   - type: textarea
@@ -19,7 +19,7 @@ body:
     id: config
     attributes:
       label: The drill config
-      description: The drill entry from drills.json, with secrets removed.
+      description: The drill entry from drills.json, with secrets taken out.
       render: json
   - type: input
     id: version

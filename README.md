@@ -2,9 +2,9 @@
 
 [![ci](https://github.com/kd-011/restore-drill/actions/workflows/ci.yml/badge.svg)](https://github.com/kd-011/restore-drill/actions/workflows/ci.yml)
 
-Backups that have never been restored are a hope, not a backup. restore-drill finds your newest backup, restores it into a throwaway temp dir, runs a sanity check, and records pass or fail with a timestamp, so a silently broken backup is caught the night it breaks, not the day you need it.
+A backup you have never restored might not work. restore-drill finds your newest backup, restores it into a throwaway temp dir, runs a sanity check and records pass or fail with a timestamp. A broken backup gets caught the night it breaks, not the day you need it.
 
-Zero dependencies. Node 22 and the tools you already use (`tar`, `age`, `restic`, `pg_restore`). Developed and tested on Linux; no daemon, no database.
+No dependencies. It needs Node 22 and the tools you already use (`tar`, `age`, `restic`, `pg_restore`). Developed and tested on Linux. There is no daemon and no database.
 
 ![restore-drill demo: two backups pass, two broken ones fail with the real tool error](docs/screenshots/terminal.png)
 
@@ -16,7 +16,7 @@ cd restore-drill
 node bin/restore-drill.mjs demo
 ```
 
-The demo builds four fake backups in a temp dir (a good SQLite file, a good tar.gz, a truncated tar.gz, an empty file), runs drills over them, prints a pass and a fail with the real error text, deletes everything, and exits 1.
+The demo builds four fake backups in a temp dir (a good SQLite file, a good tar.gz, a truncated tar.gz, an empty file) and runs drills over them. It prints passes and fails with the real error text, deletes everything and exits 1.
 
 ```
 PASS  app-db         38ms  backup 2h old
@@ -66,7 +66,7 @@ The state directory defaults to `./.restore-drill/`. Override it with `--state` 
 
 ## Configuration
 
-The config is JSON (`drills.json`), because Node has no YAML parser and the zero-dependency rule is a feature. JSON has no comments, so any key that starts with an underscore (`"_comment"`) is ignored at every level. Relative paths in the config resolve against the config file, not the working directory. `restore-drill init` writes a full annotated example, also in [`examples/drills.json`](examples/drills.json).
+The config is JSON (`drills.json`), because Node has no YAML parser and this project has no dependencies. JSON has no comments, so any key that starts with an underscore (`"_comment"`) is ignored at every level. Relative paths in the config resolve against the config file, not the working directory. `restore-drill init` writes an annotated example, which is also in [`examples/drills.json`](examples/drills.json).
 
 ```json
 {
@@ -105,13 +105,13 @@ Durations are `90s`, `30m`, `26h`, `2d`, `1h30m` or a bare number of seconds. Si
 | `decrypt` | `{ "type": "age", "identity": "key.txt" }` or `{ "type": "gpg", "passphrase_file": "pass.txt", "homedir": "..." }`. |
 | `decompress` | `true` (pick by extension: `.gz`, `.zst`, `.xz`, `.tgz`) or force `"gz"`, `"zst"`, `"xz"`. |
 
-Order of work: find, check existence, size and age, decrypt, decompress, then the drill's own check. Decrypt and decompress write into the temp dir; the original is never touched. `age`, `gpg`, `zstd` and `xz` are invoked as binaries. A missing binary is reported as a clear error on that drill, for example `age not found in PATH (needed to decrypt age backups)`.
+The order of work is: find, check existence, size and age, decrypt, decompress, then the drill's own check. Decrypt and decompress write into the temp dir, and the original is never touched. `age`, `gpg`, `zstd` and `xz` are run as binaries. If one is missing, that drill fails with an error like `age not found in PATH (needed to decrypt age backups)`.
 
 ## Drill types
 
 ### file
 
-The newest match exists, is non-empty, is recent, and has not collapsed in size. Use it for anything you cannot open but can at least watch.
+Checks that the newest match exists, is non-empty, is recent and hasn't collapsed in size. Use it for anything you can't open but can at least watch.
 
 ```json
 { "name": "app-dump", "type": "file", "source": "/backups/app/*.sql.gz",
@@ -120,7 +120,7 @@ The newest match exists, is non-empty, is recent, and has not collapsed in size.
 
 ### sqlite
 
-A private copy of the newest database is opened read-only (the original is never opened) in a separate process. `PRAGMA integrity_check` must return `ok`, every `table_exists` table must exist, and each check must return a number of at least `min` (default 1) from the first column of the first row. Checks run on a read-only connection, so they cannot change anything.
+A private copy of the newest database is opened read-only, in a separate process. The original is never opened. `PRAGMA integrity_check` must return `ok`, every `table_exists` table must exist, and each check must return a number of at least `min` (default 1) from the first column of the first row. Checks run on a read-only connection, so they can't change anything.
 
 ```json
 { "name": "app-db", "type": "sqlite", "source": "/backups/app/*.db", "max_age": "26h",
@@ -128,7 +128,7 @@ A private copy of the newest database is opened read-only (the original is never
   "checks": [{ "sql": "SELECT count(*) FROM users", "min": 100 }] }
 ```
 
-Encrypted and compressed, as nightly backups often are:
+Nightly backups are often encrypted and compressed:
 
 ```json
 { "name": "vault-db", "type": "sqlite", "source": "/backups/vault/*.db.gz.age",
@@ -138,7 +138,7 @@ Encrypted and compressed, as nightly backups often are:
 
 ### tar
 
-Newest `.tar`, `.tar.gz`, `.tgz` or `.zip`. It is listed, extracted into the temp dir, then `expect_paths` (relative to the archive root, globs allowed) must exist and `min_files` files must have been restored. Needs `tar`, or `unzip` for zips.
+Takes the newest `.tar`, `.tar.gz`, `.tgz` or `.zip`, lists it and extracts it into the temp dir. Then `expect_paths` (relative to the archive root, globs allowed) must exist and `min_files` files must have been restored. Needs `tar`, or `unzip` for zips.
 
 ```json
 { "name": "site-files", "type": "tar", "source": "/backups/site/*.tar.gz",
@@ -158,7 +158,7 @@ The password comes from `password_file`, from the environment variable named in 
   "read_data_subset": "5%", "max_age": "26h" }
 ```
 
-Restores land in the OS temp dir (`TMPDIR`). Point `TMPDIR` somewhere with room, or use `include` to restore only what you check.
+Restores land in the OS temp dir (`TMPDIR`). Point `TMPDIR` somewhere with room, or use `include` to restore only the paths you check.
 
 ### pg_dump
 
@@ -181,7 +181,7 @@ Needs `pg_restore`, plus `psql` for `restore_url`.
 
 ### command
 
-The escape hatch. Your command runs with the temp dir as its working directory and `RESTORE_DRILL_TMP` set to it. It passes on exit 0. With a `source`, the newest backup is located, checked, decrypted and decompressed as above, and `RESTORE_DRILL_FILE` is a private copy of the result.
+For anything the other types don't cover. Your command runs with the temp dir as its working directory and `RESTORE_DRILL_TMP` set to it. It passes on exit 0. With a `source`, the newest backup is found, checked, decrypted and decompressed as above, and `RESTORE_DRILL_FILE` is a private copy of the result.
 
 ```json
 { "name": "custom", "type": "command", "source": "/backups/app/*.db",
@@ -192,7 +192,7 @@ The escape hatch. Your command runs with the temp dir as its working directory a
 
 ## Running it nightly
 
-Run it after your backups finish. Anything that calls `restore-drill run` and watches the exit code works.
+Run it after your backups finish. Anything that calls `restore-drill run` and watches the exit code will do.
 
 ### systemd user timer
 
@@ -253,16 +253,16 @@ Each result is one line in `<state>/history.jsonl`:
 
 ## Safety guarantees
 
-- **Sources are read-only.** A drill never opens, writes, renames or deletes the original. Checks that need to open a file work on a private copy in the temp dir. The restic drill uses `--no-lock` so it does not even write lock files to the repository. Tests hash the backup directory before and after the sqlite, tar, file and command drills, and run them against a read-only directory.
-- **Temp dirs are private and always removed.** Each attempt gets its own directory under the OS temp dir (`TMPDIR`), mode 700, removed on success, on failure, on timeout, and on Ctrl-C or SIGTERM. Child processes run in their own process group and are killed with the drill.
-- **Secrets are not printed.** Credentials in URLs and known secret values (restic password, database password) are masked in output and in `history.jsonl`. Notification URLs never appear in output.
-- **Errors are the tool's own.** A failed drill shows the real error text from `tar`, `restic`, SQLite and the rest, not a generic message.
+- Sources are read-only. A drill never opens, writes, renames or deletes the original. Checks that need to open a file work on a private copy in the temp dir. The restic drill uses `--no-lock`, so it doesn't even write lock files to the repository. Tests hash the backup directory before and after the sqlite, tar, file and command drills, and run them against a read-only directory.
+- Temp dirs are private and always removed. Each attempt gets its own directory under the OS temp dir (`TMPDIR`), mode 700, removed on success, on failure, on timeout, and on Ctrl-C or SIGTERM. Child processes run in their own process group and are killed with the drill.
+- Secrets are masked. Credentials in URLs and known secret values (restic password, database password) are masked in output and in `history.jsonl`. Notification URLs never appear in output.
+- A failed drill shows the real error text from `tar`, `restic`, SQLite and the rest.
 
 ## Limits
 
-restore-drill proves that your newest backup restores and passes the check you gave it. It does not prove your check is meaningful: an `integrity_check` on a database that is missing last week's data still passes unless you add a row count or a freshness query. It checks the newest backup only, not the whole history. Restic's `--read-data-subset` samples the repository, so a very small corrupt region can be missed on any single night, though a different subset can be configured. `size_drop` compares file sizes and is a tripwire, not a guarantee.
+restore-drill proves that your newest backup restores and passes the check you gave it. It can't tell whether your check is any good. An `integrity_check` on a database that is missing last week's data still passes unless you add a row count or a freshness query. It only looks at the newest backup, not the whole history. Restic's `--read-data-subset` samples the repository, so a very small corrupt region can be missed on any single night, though you can configure a different subset. `size_drop` compares file sizes and only catches big drops.
 
-Not included, on purpose: a web server or daemon, a results database, accounts, cloud storage backends beyond what the restic binary handles, and Windows support.
+Left out on purpose: a web server or daemon, a results database, accounts, cloud storage backends beyond what the restic binary handles, and Windows support.
 
 ## Contributing
 
