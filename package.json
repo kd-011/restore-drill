@@ -1,6 +1,6 @@
 {
   "name": "restore-drill",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Prove your backups actually restore: restore the newest one into a temp dir, check it, record pass or fail.",
   "type": "module",
   "license": "MIT",
@@ -10,7 +10,7 @@
   "homepage": "https://github.com/kd-011/restore-drill#readme",
   "keywords": ["backup", "restore", "self-hosted", "sqlite", "restic", "postgres", "monitoring"],
   "bin": { "restore-drill": "bin/restore-drill.mjs" },
-  "files": ["bin", "src", "examples", "LICENSE", "README.md"],
+  "files": ["bin", "src", "examples", "docs", "LICENSE", "README.md", "CHANGELOG.md"],
   "engines": { "node": ">=22" },
   "scripts": { "test": "node --test" }
 }

@@ -1,0 +1,95 @@
+# Publishes to npm and cuts the GitHub Release when package.json has a version npm does not have yet.
+#
+# To release: put a "## x.y.z" section in CHANGELOG.md, run `npm version <patch|minor|major> --no-git-tag-version`,
+# and merge the pull request. This workflow then compares package.json's version with what npm has
+# (scripts/release.mjs plan). If it is new, it runs the tests, publishes with provenance, then creates the
+# v<version> tag and a GitHub Release whose notes are that CHANGELOG section. Re-running a failed run finishes
+# whatever is left, so a failed release step does not need a new version.
+#
+# Until the package exists on npm and an NPM_TOKEN secret is set, a run ends early with a notice and exits 0,
+# so a merge never leaves a red run on main. After the secret is set, run this workflow by hand (Actions >
+# publish > Run workflow) to publish the version that is waiting.
+#
+# npm auth, in this order, with no edit needed to switch:
+#   1. The repository secret NPM_TOKEN, when it exists: a granular token with publish rights on restore-drill.
+#   2. Otherwise npm trusted publishing over OIDC, once the package exists. One-time setup on npmjs.com: the
+#      package's Settings > Trusted publisher > GitHub Actions, repository kd-011/restore-drill, workflow
+#      filename publish.yml. It needs npm 11.5.1 or later (installed below) and `id-token: write`.
+# Provenance needs the repository to stay public.
+name: publish
+
+on:
+  push:
+    branches: [main]
+    paths: [package.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      # setup-node is not given a registry: it would write a placeholder token, which would stop OIDC from being used.
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: What is left to release
+        id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/release.mjs plan
+      - name: Is publishing possible yet
+        id: gate
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PLAN_PUBLISH: ${{ steps.plan.outputs.publish }}
+        run: |
+          # Nothing is on npm yet and there is no token: stop here, quietly and green.
+          if [ "$PLAN_PUBLISH" = "true" ] && [ -z "$NPM_TOKEN" ] && ! npm view restore-drill version >/dev/null 2>&1; then
+            echo "::notice title=Not published::restore-drill is not on npm yet and the NPM_TOKEN secret is not set. Set the secret, then run this workflow by hand."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Install npm 11 for trusted publishing
+        if: steps.gate.outputs.skip != 'true' && steps.plan.outputs.publish == 'true'
+        run: npm install -g npm@^11.5.1
+      - name: Install the tools the drills call
+        if: steps.gate.outputs.skip != 'true' && steps.plan.outputs.publish == 'true'
+        run: sudo apt-get update && sudo apt-get install -y age restic zstd xz-utils zip unzip gnupg postgresql-client
+      - if: steps.gate.outputs.skip != 'true' && steps.plan.outputs.publish == 'true'
+        run: npm test
+      # Before publishing, so a missing changelog section cannot leave a version on npm with no release.
+      - name: Release notes from CHANGELOG.md
+        if: steps.gate.outputs.skip != 'true' && (steps.plan.outputs.publish == 'true' || steps.plan.outputs.release == 'true')
+        env:
+          VERSION: ${{ steps.plan.outputs.version }}
+        run: node scripts/release.mjs notes "$VERSION" > "$RUNNER_TEMP/notes.md"
+      - name: Publish to npm
+        if: steps.gate.outputs.skip != 'true' && steps.plan.outputs.publish == 'true'
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ -n "$NPM_TOKEN" ]; then
+            echo "Publishing with the NPM_TOKEN secret"
+            printf '//registry.npmjs.org/:_authToken=%s\n' "$NPM_TOKEN" > "$RUNNER_TEMP/npmrc"
+            export NPM_CONFIG_USERCONFIG="$RUNNER_TEMP/npmrc"
+          else
+            echo "NPM_TOKEN is not set: publishing with trusted publishing (OIDC)"
+          fi
+          npm publish --provenance --access public --ignore-scripts
+      - name: Tag and GitHub Release
+        if: steps.gate.outputs.skip != 'true' && steps.plan.outputs.release == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.plan.outputs.version }}
+        run: gh release create "v${VERSION}" --title "v${VERSION}" --notes-file "$RUNNER_TEMP/notes.md" --target "${GITHUB_SHA}"

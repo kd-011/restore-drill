@@ -22,7 +22,7 @@ Usage:
   restore-drill demo [--out status.html]
 
 Exit codes: 0 all drills passed, 1 a drill failed, 2 config or usage error.
-Docs: https://github.com/KD011/restore-drill#readme
+Docs: https://github.com/kd-011/restore-drill#readme
 `;
 
 class UsageError extends Error {}
@@ -88,6 +88,7 @@ async function cmdRun({ values }) {
   const results = await runDrills(drills, {
     stateDir: resolveStateDir(values, config),
     notify: config.notify,
+    partial: Boolean(values.only?.length),
     warn: (msg) => process.stderr.write(`restore-drill: warning: ${msg}\n`),
     onResult: values.json ? undefined : (rec) => console.log(formatResultLine(rec, width)),
   });

@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { loadConfig } from '../src/config.mjs';
@@ -21,4 +22,16 @@ test('package.json has a bin entry, no dependencies, and Node 22', () => {
   assert.equal(pkg.devDependencies, undefined);
   assert.match(pkg.engines.node, />=\s*22/);
   assert.equal(pkg.license, 'MIT');
+});
+
+test('examples/nightly.json is a valid config with alerts and a max_age on every drill', () => {
+  const cfg = loadConfig(fileURLToPath(new URL('../examples/nightly.json', import.meta.url)));
+  assert.ok(cfg.notify.ntfy && cfg.notify.ping_success && cfg.notify.ping_fail);
+  for (const d of cfg.drills) assert.equal(d.max_age, '26h', d.name);
+});
+
+test('no tracked file points at the old account name in a URL', () => {
+  const root = fileURLToPath(new URL('..', import.meta.url));
+  const r = spawnSync('git', ['grep', '-n', '-I', ['github.com/', 'KD011'].join(''), '--', '.'], { cwd: root, encoding: 'utf8' });
+  assert.equal(r.stdout, '', 'the old account name is in a URL, the account is kd-011');
 });

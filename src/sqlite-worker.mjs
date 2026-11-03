@@ -21,6 +21,8 @@ function check(spec) {
       const shown = lines.slice(0, 5).join('; ');
       return { ok: false, error: `integrity_check failed: ${shown}${lines.length > 5 ? `; and ${lines.length - 5} more` : ''}` };
     }
+    const tables = firstValue(db.prepare("SELECT count(*) FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%'").get());
+    if (!tables) return { ok: false, error: 'database has no tables: it opens, but nothing was backed up into it' };
     const missing = [];
     for (const table of spec.tables ?? []) {
       const row = db.prepare("SELECT 1 FROM sqlite_master WHERE type IN ('table','view') AND name = ?").get(table);

@@ -85,6 +85,17 @@ export async function runDrill(drill, { lastPass }) {
   };
 }
 
+const STALE_MS = 7 * 24 * 3600 * 1000;
+
+/** Without max_age a backup job that stopped months ago still passes, so say so. */
+function warnIfStale(drill, record, warn) {
+  if (!record.ok || drill.max_age !== undefined || !record.backup_mtime) return;
+  const age = Date.parse(record.started) - Date.parse(record.backup_mtime);
+  if (age > STALE_MS) {
+    warn(`${drill.name}: passed, but the newest backup is ${formatSpan(age)} old and no max_age is set, so a backup job that stopped would not fail this drill`);
+  }
+}
+
 let handlersInstalled = false;
 function installHandlers() {
   if (handlersInstalled) return;
@@ -104,7 +115,7 @@ function installHandlers() {
  * Run drills one after another. Appends each result to history, sends notifications,
  * and returns the records. `onResult` is called as each drill finishes.
  */
-export async function runDrills(drills, { stateDir, notify, onResult = () => {}, warn = () => {} }) {
+export async function runDrills(drills, { stateDir, notify, onResult = () => {}, warn = () => {}, partial = false }) {
   installHandlers();
   const prior = readHistory(stateDir);
   const results = [];
@@ -118,9 +129,13 @@ export async function runDrills(drills, { stateDir, notify, onResult = () => {},
     results.push(record);
     onResult(record);
 
+    warnIfStale(drill, record, warn);
+
     if (!record.ok) await notifyResult(notify, record, 'failure', warn);
     else if (previous && !previous.ok) await notifyResult(notify, record, 'recovery', warn);
   }
-  await pingRun(notify, results.every((r) => r.ok), warn);
+  const allOk = results.every((r) => r.ok);
+  // A run of a few drills says nothing about the rest, so it must not stand in for the nightly one.
+  if (!(partial && allOk)) await pingRun(notify, allOk, warn);
   return results;
 }

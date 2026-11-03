@@ -13,6 +13,7 @@ if [ "$1" = "--list" ]; then
   i=0; while [ $i -lt \${STUB_ENTRIES:-6} ]; do echo "$i; 1259 1638$i TABLE public t$i app"; i=$((i+1)); done
   exit 0
 fi
+if [ "$1" = "-f" ]; then exit 0; fi  # the read-it-all pass, not the restore under test
 echo "pg_restore $*" >> "$STUB_LOG"
 echo "PGPASSWORD_SET=\${PGPASSWORD:+yes} PGHOST=$PGHOST PGUSER=$PGUSER" >> "$STUB_LOG"
 exit \${STUB_RESTORE_EXIT:-0}

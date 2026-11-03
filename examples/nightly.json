@@ -1,0 +1,42 @@
+{
+  "_comment": "A nightly setup with alerts. Run after your backups finish: restore-drill run --config nightly.json",
+  "state": "/var/lib/restore-drill",
+  "defaults": { "max_age": "26h", "timeout": "20m", "retries": 1 },
+  "notify": {
+    "ntfy": "https://ntfy.sh/CHANGE-ME-to-a-private-topic",
+    "ping_success": "https://hc-ping.com/CHANGE-ME-uuid",
+    "ping_fail": "https://hc-ping.com/CHANGE-ME-uuid/fail"
+  },
+  "drills": [
+    {
+      "name": "app-db",
+      "type": "sqlite",
+      "source": "/backups/app/*.db.gz.age",
+      "decrypt": { "type": "age", "identity": "/etc/restore-drill/age-identity.txt" },
+      "decompress": true,
+      "table_exists": ["users"],
+      "checks": [{ "sql": "SELECT count(*) FROM users", "min": 100 }]
+    },
+    {
+      "name": "site-files",
+      "type": "tar",
+      "source": "/backups/site/*.tar.gz",
+      "expect_paths": ["config/app.json", "uploads/*"],
+      "min_files": 10
+    },
+    {
+      "name": "nas-restic",
+      "type": "restic",
+      "source": "/mnt/nas/restic-repo",
+      "password_file": "/etc/restore-drill/restic-password",
+      "include": ["/srv/app"],
+      "expect_paths": ["srv/app/config.json"]
+    },
+    {
+      "name": "postgres",
+      "type": "pg_dump",
+      "source": "/backups/postgres/*.dump",
+      "min_entries": 20
+    }
+  ]
+}

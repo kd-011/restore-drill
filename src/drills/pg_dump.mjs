@@ -85,5 +85,12 @@ export async function run(drill, ctx) {
   const entries = res.stdout.split('\n').filter((l) => l.trim() && !l.startsWith(';')).length;
   const min = drill.min_entries ?? 1;
   if (entries < min) throw new DrillError(`pg_restore --list shows ${entries} entries, min_entries is ${min}`);
+
+  // --list only reads the table of contents at the front, so a dump that was cut in half or has
+  // damaged data still lists. Reading it all to /dev/null is what notices.
+  const full = await exec('pg_restore', ['-f', '/dev/null', file], { cwd: ctx.tmp, env: process.env, signal: ctx.signal, need: NEED });
+  if (full.code !== 0) {
+    throw new DrillError(`pg_restore could not read the whole dump (exit ${full.code ?? full.signal}): ${tail(full.stderr || full.stdout)}`);
+  }
   if (drill.restore_url) await restoreIntoThrowaway(drill, ctx, file);
 }
