@@ -111,10 +111,6 @@ function installHandlers() {
   process.on('exit', emergencyCleanup);
 }
 
-/**
- * Run drills one after another. Appends each result to history, sends notifications,
- * and returns the records. `onResult` is called as each drill finishes.
- */
 export async function runDrills(drills, { stateDir, notify, onResult = () => {}, warn = () => {}, partial = false }) {
   installHandlers();
   const prior = readHistory(stateDir);

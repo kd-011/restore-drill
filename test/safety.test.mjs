@@ -5,8 +5,6 @@ import {
   H, age, makeSqlite, makeTar, noise, sandbox, sha256, startCli, treeHash, truncate, writeFile,
 } from '../test-support/helpers.mjs';
 
-// ---- the source is only ever read -------------------------------------------------
-
 test('read-only: no drill type modifies, adds or removes anything in the backup dir', async (t) => {
   const sb = sandbox(t);
   makeSqlite(sb.backup('good.db'), { wal: true });
@@ -65,8 +63,6 @@ test('read-only: drills work on a read-only backup directory (nothing is written
   assert.deepEqual(fs.readdirSync(sb.backups).sort(), ['app.db', 'site.tar.gz']);
 });
 
-// ---- temp directories are always removed --------------------------------------------
-
 test('cleanup: temp dirs are removed after passes and failures of every kind', async (t) => {
   const sb = sandbox(t);
   makeSqlite(sb.backup('good.db'));
@@ -122,8 +118,6 @@ test('cleanup: SIGTERM is handled the same way', async (t) => {
   assert.notEqual(r.code, 0);
   assert.deepEqual(sb.leftovers(), []);
 });
-
-// ---- size_drop ------------------------------------------------------------------------
 
 const sizeDrill = (sb, extra = {}) =>
   sb.writeConfig([{ name: 'big', type: 'file', source: sb.backup('*.dump'), ...extra }]);

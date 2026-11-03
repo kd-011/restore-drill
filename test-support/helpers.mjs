@@ -100,7 +100,6 @@ export function writeFile(file, data) {
   return file;
 }
 
-/** Set a file's mtime to `ageMs` milliseconds ago. */
 export function age(file, ageMs) {
   const when = new Date(Date.now() - ageMs);
   fs.utimesSync(file, when, when);
@@ -180,14 +179,12 @@ export function truncate(file, keepFraction, extra = 0) {
   fs.truncateSync(file, Math.floor(size * keepFraction) + extra);
 }
 
-/** Run a shell-free command, throw on failure. */
 export function sh(cmd, args, opts = {}) {
   const r = spawnSync(cmd, args, { encoding: 'utf8', ...opts });
   if (r.status !== 0) throw new Error(`${cmd} ${args.join(' ')} failed: ${r.stderr || r.stdout}`);
   return r;
 }
 
-/** Local HTTP server that records every request. */
 export async function recorder(t, { status = 200 } = {}) {
   const requests = [];
   const server = http.createServer((req, res) => {

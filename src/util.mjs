@@ -6,8 +6,6 @@ import path from 'node:path';
 /** An expected failure with a message fit to show the user as is. */
 export class DrillError extends Error {}
 
-// ---- durations and sizes ------------------------------------------------------------
-
 const DURATION_UNITS = { ms: 1, s: 1e3, m: 6e4, h: 36e5, d: 864e5, w: 6048e5 };
 
 /** "26h", "90m", "1h30m", "45s" or a bare number of seconds. Returns ms, or null if invalid. */
@@ -67,8 +65,6 @@ export function formatElapsed(ms) {
   return ms < 1000 ? `${Math.round(ms)}ms` : `${(ms / 1000).toFixed(1)}s`;
 }
 
-// ---- secrets -------------------------------------------------------------------------
-
 /** Mask credentials in URLs and any literal secret values. */
 export function redact(text, secrets = []) {
   let out = String(text ?? '').replace(/(\b[a-z][a-z0-9+.-]*:\/\/)[^\s/@]+@/gi, '$1***@');
@@ -81,8 +77,6 @@ export function tail(text, { lines = 12, chars = 2000 } = {}) {
   const t = String(text ?? '').trim().split('\n').slice(-lines).join('\n');
   return t.length > chars ? `...${t.slice(-chars)}` : t;
 }
-
-// ---- globbing --------------------------------------------------------------------------
 
 const GLOB_CHARS = /[*?[]/;
 
@@ -173,7 +167,6 @@ export async function findNewest(pattern) {
   return best;
 }
 
-/** Every non-directory under dir. */
 export async function walkFiles(dir) {
   const files = [];
   const stack = [dir];
@@ -189,8 +182,6 @@ export async function walkFiles(dir) {
   }
   return files;
 }
-
-// ---- temp dirs and child processes ------------------------------------------------------
 
 const liveChildren = new Set();
 const liveTmpDirs = new Set();

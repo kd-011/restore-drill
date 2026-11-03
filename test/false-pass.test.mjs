@@ -11,8 +11,6 @@ import { H, age, have, makeSqlite, makeTar, noise, recorder, sandbox, stubBin, t
 
 const FIXTURE = fileURLToPath(new URL('./fixtures/items.dump', import.meta.url));
 
-// ---- tar -------------------------------------------------------------------------------
-
 /** Keep every complete entry but drop the end-of-archive blocks, as if tar was killed after its last file. */
 function dropEndMarker(buf) {
   let last = buf.length - 1;
@@ -59,8 +57,6 @@ test('tar: a .tar.zst with decompress passes when whole and fails when cut short
   assert.match(r.stdout, /end-of-archive|cut short/i);
 });
 
-// ---- sqlite ----------------------------------------------------------------------------
-
 test('sqlite: a valid database with no tables fails even with no checks configured', async (t) => {
   const sb = sandbox(t);
   const f = sb.backup('app.db');
@@ -74,8 +70,6 @@ test('sqlite: a valid database with no tables fails even with no checks configur
   assert.equal(r.code, 1, r.stdout + r.stderr);
   assert.match(r.stdout, /no tables/i);
 });
-
-// ---- pg_dump ---------------------------------------------------------------------------
 
 // pg_restore --list only reads the table of contents at the front of a custom-format
 // dump, so a dump cut in half or with damaged data still lists fine. Reading all of it
@@ -134,8 +128,6 @@ test('pg_dump (real pg_restore): a dump with damaged data fails', real, async (t
   assert.match(r.stdout, /pg_restore/);
 });
 
-// ---- monitoring ------------------------------------------------------------------------
-
 test('a partial run (--only) never sends ping_success, so it cannot hide a dead nightly job', async (t) => {
   const sb = sandbox(t);
   makeSqlite(sb.backup('a.db'));
@@ -164,8 +156,6 @@ test('a full run still sends ping_success', async (t) => {
   assert.equal(r.code, 0, r.stdout + r.stderr);
   assert.deepEqual(ping.requests.map((q) => q.url), ['/ok']);
 });
-
-// ---- stale backups ---------------------------------------------------------------------
 
 test('a passing backup that is days old and has no max_age prints a warning', async (t) => {
   const sb = sandbox(t);

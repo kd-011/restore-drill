@@ -27,11 +27,8 @@ export function appendResult(stateDir, record) {
   fs.appendFileSync(historyFile(stateDir), `${JSON.stringify(record)}\n`, { mode: 0o600 });
 }
 
-/**
- * One summary per drill: latest result, latest pass, and the current streak
- * (how many results in a row share the latest outcome).
- * `names` adds drills that are configured but have no history yet.
- */
+// A streak is how many results in a row share the latest outcome. `names` adds drills
+// that are configured but have no history yet.
 export function summarize(rows, names = []) {
   const byDrill = new Map();
   for (const n of names) byDrill.set(n, []);

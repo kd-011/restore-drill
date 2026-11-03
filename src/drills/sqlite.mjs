@@ -4,7 +4,6 @@ import { DrillError, exec, tail } from '../util.mjs';
 
 const WORKER = fileURLToPath(new URL('../sqlite-worker.mjs', import.meta.url));
 
-/** Check a copy of the newest database: integrity_check, tables, and row-count style queries. */
 export async function run(drill, ctx) {
   const copy = await prepareBackup(drill, ctx, { copy: true });
   const spec = {

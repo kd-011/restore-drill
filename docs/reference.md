@@ -25,7 +25,7 @@ The state directory defaults to `./.restore-drill/`. Override it with `--state` 
 
 ## Configuration
 
-The config is JSON (`drills.json`), because Node has no YAML parser and this project has no dependencies. JSON has no comments, so any key that starts with an underscore (`"_comment"`) is ignored at every level. Relative paths in the config resolve against the config file, not the working directory. `restore-drill init` writes an annotated example, which is also in [`examples/drills.json`](examples/drills.json).
+The config is JSON (`drills.json`), because Node has no YAML parser and this project has no dependencies. JSON has no comments, so any key that starts with an underscore (`"_comment"`) is ignored at every level. Relative paths in the config resolve against the config file, not the working directory. `restore-drill init` writes an annotated example, which is also in [`examples/drills.json`](../examples/drills.json).
 
 ```json
 {

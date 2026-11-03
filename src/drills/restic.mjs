@@ -22,7 +22,6 @@ function passwordEnv(drill) {
   return { env, args: [], secrets };
 }
 
-/** Restore the latest snapshot into a temp dir, require expected paths, then verify a slice of the repo. */
 export async function run(drill, ctx) {
   const { env, args: auth, secrets } = passwordEnv(drill);
   const repo = ['-r', drill.source, '--no-lock', ...auth];

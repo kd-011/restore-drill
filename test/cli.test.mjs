@@ -6,8 +6,6 @@ import { H, age, sandbox, writeFile } from '../test-support/helpers.mjs';
 const ok = (name, extra = {}) => ({ name, type: 'command', command: 'true', ...extra });
 const bad = (name, extra = {}) => ({ name, type: 'command', command: 'echo "it broke" >&2; exit 1', ...extra });
 
-// ---- run: output and exit codes -----------------------------------------------------
-
 test('run: exit 0 when every drill passes, one line per drill', async (t) => {
   const sb = sandbox(t);
   sb.writeConfig([ok('alpha'), ok('beta')]);
@@ -120,8 +118,6 @@ test('run: relative paths in the config resolve against the config file, not the
   assert.equal(r.code, 0, r.stdout + r.stderr);
 });
 
-// ---- config errors exit 2 ---------------------------------------------------------------
-
 const configErrors = [
   ['missing config file', null, /drills\.json|config/i],
   ['invalid JSON', '{ not json', /json/i],
@@ -185,8 +181,6 @@ test('--help and --version exit 0', async (t) => {
   assert.match(r.stdout, /^\d+\.\d+\.\d+/);
 });
 
-// ---- status -----------------------------------------------------------------------------
-
 function seedHistory(sb, rows) {
   fs.mkdirSync(sb.state, { recursive: true });
   fs.writeFileSync(`${sb.state}/history.jsonl`, rows.map((r) => JSON.stringify({
@@ -241,8 +235,6 @@ test('status: reflects real runs end to end', async (t) => {
   assert.match(r.stdout, /beta.*fail.*never.*2 fail/is);
 });
 
-// ---- report -----------------------------------------------------------------------------
-
 test('report: writes a single self-contained HTML file', async (t) => {
   const sb = sandbox(t);
   sb.writeConfig([ok('alpha'), bad('beta')]);
@@ -291,8 +283,6 @@ test('report: a drill that never ran, and an empty state dir, still render', asy
   assert.equal(r.code, 0, r.stderr);
   assert.match(fs.readFileSync(out, 'utf8'), /alpha/);
 });
-
-// ---- init / demo ------------------------------------------------------------------------
 
 test('init: writes a valid, annotated example config and refuses to overwrite it', async (t) => {
   const sb = sandbox(t);

@@ -65,7 +65,6 @@ async function requireEndMarker(archive, signal) {
   }
 }
 
-/** List the newest archive, extract it, and require the expected paths. */
 export async function run(drill, ctx) {
   const archive = await prepareBackup(drill, ctx);
   const out = path.join(ctx.tmp, 'restore');

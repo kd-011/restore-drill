@@ -49,7 +49,7 @@ function resolveStateDir(values, config) {
   return path.resolve('.restore-drill');
 }
 
-/** Load the config. With `optional`, a missing default drills.json is not an error. */
+// With `optional`, a missing default drills.json is not an error.
 function getConfig(values, { optional = false } = {}) {
   const file = values.config ?? 'drills.json';
   if (optional && !values.config && !fs.existsSync(file)) return null;
@@ -69,8 +69,6 @@ export function formatResultLine(rec, width = 0) {
   }
   return `${paint('31', 'FAIL')}  ${name}  ${took}  ${oneLine(rec.error)}`;
 }
-
-// ---- run ----------------------------------------------------------------------------------
 
 async function cmdRun({ values }) {
   const config = getConfig(values);
@@ -96,8 +94,6 @@ async function cmdRun({ values }) {
   if (values.json) console.log(JSON.stringify({ ok, results }, null, 2));
   return ok ? 0 : 1;
 }
-
-// ---- status -------------------------------------------------------------------------------
 
 function statusRows(values) {
   const config = getConfig(values, { optional: true });
@@ -127,8 +123,6 @@ async function cmdStatus({ values }) {
   return 0;
 }
 
-// ---- report -------------------------------------------------------------------------------
-
 async function cmdReport({ values }) {
   const summary = statusRows(values);
   const out = path.resolve(values.out ?? 'status.html');
@@ -137,8 +131,6 @@ async function cmdReport({ values }) {
   console.log(`wrote ${out}`);
   return 0;
 }
-
-// ---- init ---------------------------------------------------------------------------------
 
 async function cmdInit({ values }) {
   const target = path.resolve(values.out ?? 'drills.json');
@@ -150,13 +142,9 @@ async function cmdInit({ values }) {
   return 0;
 }
 
-// ---- demo ---------------------------------------------------------------------------------
-
 async function cmdDemo({ values }) {
   return runDemo({ out: values.out ? path.resolve(values.out) : null, line: formatResultLine });
 }
-
-// ---- entry --------------------------------------------------------------------------------
 
 export async function main(argv) {
   try {
