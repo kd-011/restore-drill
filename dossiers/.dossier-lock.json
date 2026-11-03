@@ -10,12 +10,12 @@
             "package.json:12",
             "package.json:14"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             "package.json": {
               "path": "package.json",
-              "blob": "9b2b7e386b57f3a42c3ab61a67fe12c038afc3dc",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
               "range": {
                 "start": 12,
                 "end": 12,
@@ -24,8 +24,8 @@
             },
             "package.json:14-14": {
               "path": "package.json",
-              "blob": "9b2b7e386b57f3a42c3ab61a67fe12c038afc3dc",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
               "range": {
                 "start": 14,
                 "end": 14,
@@ -40,12 +40,12 @@
           "specs": [
             "package.json"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             "package.json": {
               "path": "package.json",
-              "blob": "9b2b7e386b57f3a42c3ab61a67fe12c038afc3dc",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4"
+              "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca"
             }
           }
         },
@@ -55,12 +55,12 @@
           "specs": [
             "src/config.mjs:36-42"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             "src/config.mjs": {
               "path": "src/config.mjs",
               "blob": "267c21f57fb8b5ceccbeff901009d92d19a26f53",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
               "range": {
                 "start": 36,
                 "end": 42,
@@ -75,14 +75,14 @@
           "specs": [
             "src/config.mjs:33",
             "src/steps.mjs:29-31",
-            "src/history.mjs:46"
+            "src/history.mjs:43"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             "src/config.mjs": {
               "path": "src/config.mjs",
               "blob": "267c21f57fb8b5ceccbeff901009d92d19a26f53",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
               "range": {
                 "start": 33,
                 "end": 33,
@@ -92,7 +92,7 @@
             "src/steps.mjs": {
               "path": "src/steps.mjs",
               "blob": "410cd61da91bb9c5e3b250a05d7670e9f7a4d888",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
               "range": {
                 "start": 29,
                 "end": 31,
@@ -101,11 +101,11 @@
             },
             "src/history.mjs": {
               "path": "src/history.mjs",
-              "blob": "03b27e9bdaa9b0e73a902b10dd8c04d0e3e859c2",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "4b23dae533059f5bee8f27bd3d4c2870d3108c2a",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
               "range": {
-                "start": 46,
-                "end": 46,
+                "start": 43,
+                "end": 43,
                 "hash": "0eab10f443acc42ae8dac9f238c3be2d69c98ad7"
               }
             }
@@ -115,25 +115,25 @@
           "text": "The SQLite drill opens a private copy of the backup read-only, in a separate process.",
           "line": 18,
           "specs": [
-            "src/drills/sqlite.mjs:14-18",
+            "src/drills/sqlite.mjs:13-17",
             "src/sqlite-worker.mjs:17"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             "src/drills/sqlite.mjs": {
               "path": "src/drills/sqlite.mjs",
-              "blob": "1fa06ecb7b8ffbe16bbcb9f5187fe96931f9ab51",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "2ceff24f283d1166e8c4e070246ab4b9d6c4b0cf",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
               "range": {
-                "start": 14,
-                "end": 18,
+                "start": 13,
+                "end": 17,
                 "hash": "e06875ff3f8c15fc9ef203d2a1051ac898c45926"
               }
             },
             "src/sqlite-worker.mjs": {
               "path": "src/sqlite-worker.mjs",
-              "blob": "7f7ad38d66fe849fcaca3833f2a5297de90b0eae",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "2732dfe7dd2dc842bb295526543f2d15668a9c83",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
               "range": {
                 "start": 17,
                 "end": 17,
@@ -146,28 +146,28 @@
           "text": "The restic drill runs with `--no-lock` and samples 5 percent of the repository data by default.",
           "line": 19,
           "specs": [
-            "src/drills/restic.mjs:28",
-            "src/drills/restic.mjs:63"
+            "src/drills/restic.mjs:27",
+            "src/drills/restic.mjs:62"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             "src/drills/restic.mjs": {
               "path": "src/drills/restic.mjs",
-              "blob": "8c86654cc2bb0febd712f513491f869b52766bf4",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "36e406fec341317dc1826a5c8003a01e4ed6faf6",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
               "range": {
-                "start": 28,
-                "end": 28,
+                "start": 27,
+                "end": 27,
                 "hash": "577b319a294467adf09de53bcfa89bfc94f69a76"
               }
             },
-            "src/drills/restic.mjs:63-63": {
+            "src/drills/restic.mjs:62-62": {
               "path": "src/drills/restic.mjs",
-              "blob": "8c86654cc2bb0febd712f513491f869b52766bf4",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "36e406fec341317dc1826a5c8003a01e4ed6faf6",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
               "range": {
-                "start": 63,
-                "end": 63,
+                "start": 62,
+                "end": 62,
                 "hash": "5c296ef144c7295d68003fec447340c92b2d4ed4"
               }
             }
@@ -181,12 +181,12 @@
             "src/drills/pg_dump.mjs:23",
             "src/drills/pg_dump.mjs:63-68"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             "src/drills/pg_dump.mjs": {
               "path": "src/drills/pg_dump.mjs",
-              "blob": "325b27fe6b6b8168046fee7bacb66e852fa1f22c",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "b146e74961122f18bb623b498dc2063ad29b168c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
               "range": {
                 "start": 13,
                 "end": 13,
@@ -195,8 +195,8 @@
             },
             "src/drills/pg_dump.mjs:23-23": {
               "path": "src/drills/pg_dump.mjs",
-              "blob": "325b27fe6b6b8168046fee7bacb66e852fa1f22c",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "b146e74961122f18bb623b498dc2063ad29b168c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
               "range": {
                 "start": 23,
                 "end": 23,
@@ -205,8 +205,8 @@
             },
             "src/drills/pg_dump.mjs:63-68": {
               "path": "src/drills/pg_dump.mjs",
-              "blob": "325b27fe6b6b8168046fee7bacb66e852fa1f22c",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "b146e74961122f18bb623b498dc2063ad29b168c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
               "range": {
                 "start": 63,
                 "end": 68,
@@ -219,17 +219,17 @@
           "text": "`run` exits 0 when every drill passed and 1 when any failed.",
           "line": 21,
           "specs": [
-            "src/cli.mjs:94-96"
+            "src/cli.mjs:93-95"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
-              "blob": "fddedf9c201325ca5c1939e462c8128cfd6a4b7b",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
               "range": {
-                "start": 94,
-                "end": 96,
+                "start": 93,
+                "end": 95,
                 "hash": "56aa396604c1af14b99db7f9c2fe213d78f8b343"
               }
             }
@@ -239,17 +239,17 @@
           "text": "Every attempt gets its own temp dir under the OS temp dir with mode 700.",
           "line": 25,
           "specs": [
-            "src/util.mjs:215-217"
+            "src/util.mjs:206-208"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             "src/util.mjs": {
               "path": "src/util.mjs",
-              "blob": "b60b8b222fb58cd5fa87c439390081ad8e6f9ce7",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
               "range": {
-                "start": 215,
-                "end": 217,
+                "start": 206,
+                "end": 208,
                 "hash": "37c2cf41049d1f5cec8a359b836a14eb2e1b81f0"
               }
             }
@@ -259,28 +259,28 @@
           "text": "Ctrl-C and SIGTERM remove the temp dirs first and exit 130 and 143.",
           "line": 26,
           "specs": [
-            "src/runner.mjs:92-98",
-            "src/util.mjs:231"
+            "src/runner.mjs:103-109",
+            "src/util.mjs:222"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
-              "blob": "7a2cbef03bf3fa6a0f10b0a0b362345d9d71e49f",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
               "range": {
-                "start": 92,
-                "end": 98,
+                "start": 103,
+                "end": 109,
                 "hash": "75af70f5fc66fc1df54cf1b2f34178e7b2c7c4c0"
               }
             },
             "src/util.mjs": {
               "path": "src/util.mjs",
-              "blob": "b60b8b222fb58cd5fa87c439390081ad8e6f9ce7",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
               "range": {
-                "start": 231,
-                "end": 231,
+                "start": 222,
+                "end": 222,
                 "hash": "a056d0a1981758eb26a53cae795b0c25382dceea"
               }
             }
@@ -293,12 +293,12 @@
             "src/history.mjs:4",
             "src/cli.mjs:46-50"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             "src/history.mjs": {
               "path": "src/history.mjs",
-              "blob": "03b27e9bdaa9b0e73a902b10dd8c04d0e3e859c2",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "4b23dae533059f5bee8f27bd3d4c2870d3108c2a",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
               "range": {
                 "start": 4,
                 "end": 4,
@@ -307,8 +307,8 @@
             },
             "src/cli.mjs": {
               "path": "src/cli.mjs",
-              "blob": "fddedf9c201325ca5c1939e462c8128cfd6a4b7b",
-              "commit": "03a42be2d2992e29e1469e48d47f7aadbed61dc4",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
               "range": {
                 "start": 46,
                 "end": 50,
@@ -324,12 +324,12 @@
             ".github/workflows/ci.yml:9-10",
             ".github/workflows/ci.yml:24"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             ".github/workflows/ci.yml": {
               "path": ".github/workflows/ci.yml",
-              "blob": "b7361436577d78f059e9dc4c8da599f8e3081048",
-              "commit": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+              "blob": "c5407086eb07ddfe1a6866c63e03ca1feb7212d9",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
               "range": {
                 "start": 9,
                 "end": 10,
@@ -338,8 +338,8 @@
             },
             ".github/workflows/ci.yml:24-24": {
               "path": ".github/workflows/ci.yml",
-              "blob": "b7361436577d78f059e9dc4c8da599f8e3081048",
-              "commit": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+              "blob": "c5407086eb07ddfe1a6866c63e03ca1feb7212d9",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
               "range": {
                 "start": 24,
                 "end": 24,
@@ -355,23 +355,23 @@
             ".github/dependabot.yml",
             ".github/scripts/automerge-eligible.mjs"
           ],
-          "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415",
+          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
           "files": {
             ".github/dependabot.yml": {
               "path": ".github/dependabot.yml",
               "blob": "5e3a090199e4384ea98a662632c33699793ce495",
-              "commit": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415"
+              "commit": "04fd69ef78928701e82c32d8190e40781641f4d8"
             },
             ".github/scripts/automerge-eligible.mjs": {
               "path": ".github/scripts/automerge-eligible.mjs",
               "blob": "4d76b76561799212bec89214b6695491b6ea0f60",
-              "commit": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415"
+              "commit": "04fd69ef78928701e82c32d8190e40781641f4d8"
             }
           }
         }
       },
-      "pinnedAt": "2026-11-02T13:34:53.923Z",
-      "head": "8ff8d4ba1c13f8a1e48b5dbc6681cc56f3192415"
+      "pinnedAt": "2026-11-03T07:34:29.988Z",
+      "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a"
     }
   }
 }
