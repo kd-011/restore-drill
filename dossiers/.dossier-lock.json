@@ -372,6 +372,2053 @@
       },
       "pinnedAt": "2026-11-03T07:34:29.988Z",
       "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a"
+    },
+    "restore-drill-agents": {
+      "claims": {
+        "916583410f8e": {
+          "text": "Install: nothing to install, the package has no dependencies.",
+          "line": 15,
+          "specs": [
+            "package.json"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "package.json": {
+              "path": "package.json",
+              "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca"
+            }
+          }
+        },
+        "2ef5b8850392": {
+          "text": "Test everything: `node --test`.",
+          "line": 16,
+          "specs": [
+            "package.json#scripts.test"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "package.json#scripts.test": {
+              "path": "package.json",
+              "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "jsonKey": {
+                "key": "scripts.test",
+                "hash": "d81653e8dc31c80ca8b4ff59a118d16301d68cfc",
+                "value": "\"node --test\""
+              }
+            }
+          }
+        },
+        "3d48c857f044": {
+          "text": "Test one file while working: `node --test test/sqlite.test.mjs`.",
+          "line": 17,
+          "specs": [
+            "CONTRIBUTING.md:13-17"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "CONTRIBUTING.md": {
+              "path": "CONTRIBUTING.md",
+              "blob": "07b7d9b1a9e478da480a715a15a5431844609847",
+              "commit": "dd002ca5fbd81883ad13b0ca3619d8862036c3ab",
+              "range": {
+                "start": 13,
+                "end": 17,
+                "hash": "cef42a9a078387bd6e85a8ab128a9311e9ace9db"
+              }
+            }
+          }
+        },
+        "986b75d0e1e8": {
+          "text": "Run the CLI from the checkout: `node bin/restore-drill.mjs <run|status|report|init|demo>`. `demo` builds fake backups in a temp dir and exits 1 on purpose.",
+          "line": 18,
+          "specs": [
+            "bin/restore-drill.mjs",
+            "src/cli.mjs:35-41",
+            "src/demo.mjs:54-105"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "bin/restore-drill.mjs": {
+              "path": "bin/restore-drill.mjs",
+              "blob": "7c5aaf52f15c7203f8ad3c6ddc576570a2655672",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa"
+            },
+            "src/cli.mjs": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 35,
+                "end": 41,
+                "hash": "94e163803b55400dd133ebc4a827ee4c992f3fe0"
+              }
+            },
+            "src/demo.mjs": {
+              "path": "src/demo.mjs",
+              "blob": "f57250717a7079efd9f50212a9fee5d390715ea8",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 54,
+                "end": 105,
+                "hash": "846005c566c822a354bc6f2b7b0cb110850da463"
+              }
+            }
+          }
+        },
+        "24b59103aa0e": {
+          "text": "There is no lint, format or typecheck script.",
+          "line": 19,
+          "specs": [
+            "package.json#scripts"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "package.json#scripts": {
+              "path": "package.json",
+              "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "jsonKey": {
+                "key": "scripts",
+                "hash": "9e1a4e4bf3a6bb65513545cd2424c565c6465d9c",
+                "value": "{\"test\":\"node --test\"}"
+              }
+            }
+          }
+        },
+        "dd4d522e6f08": {
+          "text": "Dry-run the release plan without touching npm or GitHub: `node scripts/release.mjs plan --published 0.1.0,0.2.0 --release-exists false`.",
+          "line": 20,
+          "specs": [
+            "scripts/release.mjs:1-12",
+            "scripts/release.mjs:33-35"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "scripts/release.mjs": {
+              "path": "scripts/release.mjs",
+              "blob": "6cd841ca770ef7fe188e9a16ca9460074617eef8",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 1,
+                "end": 12,
+                "hash": "ee4da172e78841f070a77e2046e8d8260543e8d7"
+              }
+            },
+            "scripts/release.mjs:33-35": {
+              "path": "scripts/release.mjs",
+              "blob": "6cd841ca770ef7fe188e9a16ca9460074617eef8",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 33,
+                "end": 35,
+                "hash": "747308d1170158db862f2d1d960dea8be27ee9ba"
+              }
+            }
+          }
+        },
+        "f873dd3f846f": {
+          "text": "Regenerate the README terminal image from a real demo run (needs a Chromium-family browser): `node scripts/make-hero.mjs`.",
+          "line": 21,
+          "specs": [
+            "scripts/make-hero.mjs:1-4"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "scripts/make-hero.mjs": {
+              "path": "scripts/make-hero.mjs",
+              "blob": "17412155ebddbe86fd9b99eb43f235d35b1a2f80",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 1,
+                "end": 4,
+                "hash": "97ed85663861cb17d396172f271275dcaa8a2c98"
+              }
+            }
+          }
+        },
+        "eb7213d2b875": {
+          "text": "Docs drift check: `dossier-scribe lint`, then `dossier-scribe check`, run from the repo root. `pin` after fixing claims.",
+          "line": 22,
+          "specs": [
+            "dossier-scribe.json",
+            ".github/workflows/upkeep.yml:62-70"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "dossier-scribe.json": {
+              "path": "dossier-scribe.json",
+              "blob": "b3ea9c88c9965933fc0f674783ddf509d3373a98",
+              "commit": "04fd69ef78928701e82c32d8190e40781641f4d8"
+            },
+            ".github/workflows/upkeep.yml": {
+              "path": ".github/workflows/upkeep.yml",
+              "blob": "8bfe01f5e552f692fa41c68c3f75f84697c98f5b",
+              "commit": "98c0b990300f062f23bc79c6a329dfc23145b2c7",
+              "range": {
+                "start": 62,
+                "end": 70,
+                "hash": "5867cc161aa1325e71ec4c64b35ecc3297c8d819"
+              }
+            }
+          }
+        },
+        "c28386d0e828": {
+          "text": "Node 22 or newer, ES modules, no npm dependencies. Use `node:` built-ins and call the real tools (`tar`, `age`, `restic`, `pg_restore`) rather than reimpleme...",
+          "line": 26,
+          "specs": [
+            "CONTRIBUTING.md:7",
+            "package.json#engines.node"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "CONTRIBUTING.md": {
+              "path": "CONTRIBUTING.md",
+              "blob": "07b7d9b1a9e478da480a715a15a5431844609847",
+              "commit": "dd002ca5fbd81883ad13b0ca3619d8862036c3ab",
+              "range": {
+                "start": 7,
+                "end": 7,
+                "hash": "1eb6f2529d897e07ccc1aaf19409ca35063e229e"
+              }
+            },
+            "package.json#engines.node": {
+              "path": "package.json",
+              "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "jsonKey": {
+                "key": "engines.node",
+                "hash": "02bc192b69d35e23c1375adfa8377c787dc525d5",
+                "value": "\">=22\""
+              }
+            }
+          }
+        },
+        "8114066eef4a": {
+          "text": "A drill only reads its source. Anything it writes goes in its temp dir, and the temp dir is always removed. A change that weakens either needs a test showing...",
+          "line": 27,
+          "specs": [
+            "CONTRIBUTING.md:8"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "CONTRIBUTING.md": {
+              "path": "CONTRIBUTING.md",
+              "blob": "07b7d9b1a9e478da480a715a15a5431844609847",
+              "commit": "dd002ca5fbd81883ad13b0ca3619d8862036c3ab",
+              "range": {
+                "start": 8,
+                "end": 8,
+                "hash": "27db8d265e02d1d5a7b77044b1cc110f01fc2e02"
+              }
+            }
+          }
+        },
+        "cf81282c3cc4": {
+          "text": "Error text shown to the user is the tool's real error with secrets redacted.",
+          "line": 28,
+          "specs": [
+            "CONTRIBUTING.md:9"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "CONTRIBUTING.md": {
+              "path": "CONTRIBUTING.md",
+              "blob": "07b7d9b1a9e478da480a715a15a5431844609847",
+              "commit": "dd002ca5fbd81883ad13b0ca3619d8862036c3ab",
+              "range": {
+                "start": 9,
+                "end": 9,
+                "hash": "9bd666057cd2b76e7336e6647254db57bef49283"
+              }
+            }
+          }
+        },
+        "59ac6acb8147": {
+          "text": "Tests build real fixtures (a real SQLite file, a real tar.gz, a truncated one). Stub executables on `PATH` are fine for heavy tools such as `pg_restore`.",
+          "line": 29,
+          "specs": [
+            "CONTRIBUTING.md:10"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "CONTRIBUTING.md": {
+              "path": "CONTRIBUTING.md",
+              "blob": "07b7d9b1a9e478da480a715a15a5431844609847",
+              "commit": "dd002ca5fbd81883ad13b0ca3619d8862036c3ab",
+              "range": {
+                "start": 10,
+                "end": 10,
+                "hash": "aaaa0c3e5b7b7f1344ee39c17177c1dd6fcd4bbb"
+              }
+            }
+          }
+        },
+        "cf3113afef3e": {
+          "text": "Layout: `src/cli.mjs` is the command entry, `src/runner.mjs` runs drills, one module per drill type in `src/drills/`, shared backup steps in `src/steps.mjs`,...",
+          "line": 30,
+          "specs": [
+            "src/cli.mjs",
+            "src/runner.mjs:14",
+            "src/steps.mjs:1-2",
+            "src/util.mjs:1-5",
+            "test-support/helpers.mjs:1-2"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/cli.mjs": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a"
+            },
+            "src/runner.mjs": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 14,
+                "end": 14,
+                "hash": "48098676082d48ce4e166fb140e6f5455080122d"
+              }
+            },
+            "src/steps.mjs": {
+              "path": "src/steps.mjs",
+              "blob": "410cd61da91bb9c5e3b250a05d7670e9f7a4d888",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 1,
+                "end": 2,
+                "hash": "2522207c67956a978cc9191ece88cebcc53bf957"
+              }
+            },
+            "src/util.mjs": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 1,
+                "end": 5,
+                "hash": "15cb4e79e123f3562c8a478db5dd11ca7aa205e2"
+              }
+            },
+            "test-support/helpers.mjs": {
+              "path": "test-support/helpers.mjs",
+              "blob": "e9a74a0b6f05fee55084e3bf8d3bef927573bca0",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 1,
+                "end": 2,
+                "hash": "8f1e7e141705771bc004dad50976b9c6b2270a75"
+              }
+            }
+          }
+        },
+        "66ad51a353a7": {
+          "text": "A drill module exports `run(drill, ctx)` and throws a `DrillError` with a message fit to show as is.",
+          "line": 31,
+          "specs": [
+            "src/drills/command.mjs:5-16",
+            "src/util.mjs:6-7"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/drills/command.mjs": {
+              "path": "src/drills/command.mjs",
+              "blob": "897c70ba259a1f2f8a431ba4e3e5b8d64ca5a79a",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 5,
+                "end": 16,
+                "hash": "8d958c32a68e1ae8412426657d4e07d61b5b0ea1"
+              }
+            },
+            "src/util.mjs": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 6,
+                "end": 7,
+                "hash": "1273593c5c4497fbe1fbf8feb4a2b1f1451f5249"
+              }
+            }
+          }
+        },
+        "f606a6ab1c26": {
+          "text": "Contributions are signed off (`git commit -s`, DCO), PRs stay small, add or update a test, and update the README when behaviour changes.",
+          "line": 32,
+          "specs": [
+            "CONTRIBUTING.md:21-39",
+            ".github/PULL_REQUEST_TEMPLATE.md"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "CONTRIBUTING.md": {
+              "path": "CONTRIBUTING.md",
+              "blob": "07b7d9b1a9e478da480a715a15a5431844609847",
+              "commit": "dd002ca5fbd81883ad13b0ca3619d8862036c3ab",
+              "range": {
+                "start": 21,
+                "end": 39,
+                "hash": "ab3b95af3cd2005c34864f4de7e17725e69278a4"
+              }
+            },
+            ".github/PULL_REQUEST_TEMPLATE.md": {
+              "path": ".github/PULL_REQUEST_TEMPLATE.md",
+              "blob": "a27eb3c0806b533c7f3f9a90428ba800f0a245fc",
+              "commit": "04fd69ef78928701e82c32d8190e40781641f4d8"
+            }
+          }
+        },
+        "1c1b7df4a4db": {
+          "text": "A version bump is a PR with a `## x.y.z` CHANGELOG section and `npm version <patch|minor|major> --no-git-tag-version`.",
+          "line": 33,
+          "specs": [
+            ".github/workflows/publish.yml:1-6"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            ".github/workflows/publish.yml": {
+              "path": ".github/workflows/publish.yml",
+              "blob": "072dd447913a2b78599cdf51d87abc02b9bb128c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 1,
+                "end": 6,
+                "hash": "a4d95d5f5a3b3674476376b5e46d0effbf46c0c1"
+              }
+            }
+          }
+        },
+        "4e71e0f4c530": {
+          "text": "`test/hygiene.test.mjs` scans every tracked and untracked, non-ignored text file for an em dash, the strings for a personal mail domain and a home-directory ...",
+          "line": 37,
+          "specs": [
+            "test/hygiene.test.mjs:14-23",
+            "test/hygiene.test.mjs:43-62"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "test/hygiene.test.mjs": {
+              "path": "test/hygiene.test.mjs",
+              "blob": "96e939de413da2c64a11e7f81d4c9664207e0c5c",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 14,
+                "end": 23,
+                "hash": "dfdb52ebf1ac203ba09dbde375749d4932850104"
+              }
+            },
+            "test/hygiene.test.mjs:43-62": {
+              "path": "test/hygiene.test.mjs",
+              "blob": "96e939de413da2c64a11e7f81d4c9664207e0c5c",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 43,
+                "end": 62,
+                "hash": "a769e9657e84ccc480bb7ba02001e8cc7ab95c17"
+              }
+            }
+          }
+        },
+        "190c55c58616": {
+          "text": "The same file checks every commit: author must be `kd-011` or `KD011` with a `users.noreply.github.com` email, and a message containing `claude`, `anthropic`...",
+          "line": 38,
+          "specs": [
+            "test/hygiene.test.mjs:41",
+            "test/hygiene.test.mjs:67-86"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "test/hygiene.test.mjs": {
+              "path": "test/hygiene.test.mjs",
+              "blob": "96e939de413da2c64a11e7f81d4c9664207e0c5c",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 41,
+                "end": 41,
+                "hash": "9b976b66dcef8be6ad023db8715ff649a698a841"
+              }
+            },
+            "test/hygiene.test.mjs:67-86": {
+              "path": "test/hygiene.test.mjs",
+              "blob": "96e939de413da2c64a11e7f81d4c9664207e0c5c",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 67,
+                "end": 86,
+                "hash": "17ba4e2e52fe262741a05e27ab16113b6e95d075"
+              }
+            }
+          }
+        },
+        "e2d67c175ae6": {
+          "text": "`.restore-drill/` is not in `.gitignore`, and the default state directory is `.restore-drill` in the working directory. Running `run` from the repo root leav...",
+          "line": 39,
+          "specs": [
+            ".gitignore",
+            "src/cli.mjs:46-50",
+            "test/hygiene.test.mjs:43-49"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            ".gitignore": {
+              "path": ".gitignore",
+              "blob": "56fd8bc4278be821ddd10aa4720dd64033b59937",
+              "commit": "08ff27394828715fb0268b4af737905fd1f6b3b7"
+            },
+            "src/cli.mjs": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 46,
+                "end": 50,
+                "hash": "2c88e3fcaff077f0ae1b86e5092beaf663fe4f43"
+              }
+            },
+            "test/hygiene.test.mjs": {
+              "path": "test/hygiene.test.mjs",
+              "blob": "96e939de413da2c64a11e7f81d4c9664207e0c5c",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 43,
+                "end": 49,
+                "hash": "0bd16a28767efe442fe3bf477d29118a3b32590e"
+              }
+            }
+          }
+        },
+        "11d9ef08f11b": {
+          "text": "A new drill option must be added to that type's `keys` in `src/config.mjs`, or the config is rejected as an unknown option. Add it to `DEFAULTABLE` only if `...",
+          "line": 40,
+          "specs": [
+            "src/config.mjs:12-28",
+            "src/config.mjs:94"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/config.mjs": {
+              "path": "src/config.mjs",
+              "blob": "267c21f57fb8b5ceccbeff901009d92d19a26f53",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 12,
+                "end": 28,
+                "hash": "31cc372a3f4c550b62b1b0719802495022443540"
+              }
+            },
+            "src/config.mjs:94-94": {
+              "path": "src/config.mjs",
+              "blob": "267c21f57fb8b5ceccbeff901009d92d19a26f53",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 94,
+                "end": 94,
+                "hash": "3fd20d00aab04a90e7e42a30a75b640e474d6cbd"
+              }
+            }
+          }
+        },
+        "2b381ccda6f0": {
+          "text": "`examples/drills.json` must equal `EXAMPLE_CONFIG` in `src/example-config.mjs`, and `restore-drill init` writes that object. Change both together.",
+          "line": 41,
+          "specs": [
+            "test/examples.test.mjs:11-15",
+            "src/cli.mjs:135-143"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "test/examples.test.mjs": {
+              "path": "test/examples.test.mjs",
+              "blob": "3da4a5ed5451713328932446bf78691efe53f7e6",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 11,
+                "end": 15,
+                "hash": "cd66ffc023dbc9908b8b283398063a740b376123"
+              }
+            },
+            "src/cli.mjs": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 135,
+                "end": 143,
+                "hash": "b96dd6e70e9a386c64bafa79ec6ce2c793a885dc"
+              }
+            }
+          }
+        },
+        "104c2388e0c9": {
+          "text": "`size_drop` compares against the last passing run, not the last run, so a broken small backup cannot become the new normal.",
+          "line": 42,
+          "specs": [
+            "src/runner.mjs:118-120",
+            "src/steps.mjs:29-31"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/runner.mjs": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 118,
+                "end": 120,
+                "hash": "a8481951bdeece1f3c6ef65192d0e1fe780eadb6"
+              }
+            },
+            "src/steps.mjs": {
+              "path": "src/steps.mjs",
+              "blob": "410cd61da91bb9c5e3b250a05d7670e9f7a4d888",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 29,
+                "end": 31,
+                "hash": "87a80210a86a6719acdffd2f7c67b8e0e0cbdffb"
+              }
+            }
+          }
+        },
+        "595683de9d43": {
+          "text": "A run limited with `--only` never sends `ping_success` when it passes, so a hand test cannot make a dead nightly job look alive. It still sends `ping_fail`.",
+          "line": 43,
+          "specs": [
+            "src/runner.mjs:133-135"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/runner.mjs": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 133,
+                "end": 135,
+                "hash": "b5f01886c8831ad66bd7f68446e8bb874449afc2"
+              }
+            }
+          }
+        },
+        "7d49faad07d6": {
+          "text": "The SQLite check runs in a child process (`src/sqlite-worker.mjs`) so a hung call can be killed on timeout. The same file builds the demo database in `make` ...",
+          "line": 44,
+          "specs": [
+            "src/drills/sqlite.mjs:5-16",
+            "src/sqlite-worker.mjs:1-3"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/drills/sqlite.mjs": {
+              "path": "src/drills/sqlite.mjs",
+              "blob": "2ceff24f283d1166e8c4e070246ab4b9d6c4b0cf",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 5,
+                "end": 16,
+                "hash": "af2b78a5c62e7cb211b450ba1341c2af86234d74"
+              }
+            },
+            "src/sqlite-worker.mjs": {
+              "path": "src/sqlite-worker.mjs",
+              "blob": "2732dfe7dd2dc842bb295526543f2d15668a9c83",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 1,
+                "end": 3,
+                "hash": "b9f88c949817dc07f9d1bf24a87d494dcb5f8b2b"
+              }
+            }
+          }
+        },
+        "f6b8d0bbcd4f": {
+          "text": "Child processes start detached in their own process group and are killed with the drill. Signal and exit handlers remove live temp dirs. New code that spawns...",
+          "line": 45,
+          "specs": [
+            "src/util.mjs:222-230",
+            "src/util.mjs:241-289",
+            "src/runner.mjs:99-112"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/util.mjs": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 222,
+                "end": 230,
+                "hash": "b20532818caa65c71f5193450f45d50189467740"
+              }
+            },
+            "src/util.mjs:241-289": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 241,
+                "end": 289,
+                "hash": "a3f66da456b0e2354e7fb16f84b6462a813fbe0e"
+              }
+            },
+            "src/runner.mjs": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 99,
+                "end": 112,
+                "hash": "b30dbd751ba39b8c5fa3071d0a4ee5fb6aee8f2b"
+              }
+            }
+          }
+        },
+        "50444b8e04ad": {
+          "text": "`ci.yml` job names are the required status checks in `.github/rulesets/main.json`. Renaming the matrix or the job leaves a required check that never reports....",
+          "line": 46,
+          "specs": [
+            ".github/workflows/ci.yml:16-24",
+            ".github/rulesets/main.json:13-20",
+            ".github/workflows/dependabot-automerge.yml:1-4"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            ".github/workflows/ci.yml": {
+              "path": ".github/workflows/ci.yml",
+              "blob": "c5407086eb07ddfe1a6866c63e03ca1feb7212d9",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 16,
+                "end": 24,
+                "hash": "255810feaeb81e1b1d0526489a62e6c19a3dc385"
+              }
+            },
+            ".github/rulesets/main.json": {
+              "path": ".github/rulesets/main.json",
+              "blob": "70660130885a78c5740b9fee0eb388d7617407df",
+              "commit": "04fd69ef78928701e82c32d8190e40781641f4d8",
+              "range": {
+                "start": 13,
+                "end": 20,
+                "hash": "06e406729b5213393cbabee26bea031bc3cea43e"
+              }
+            },
+            ".github/workflows/dependabot-automerge.yml": {
+              "path": ".github/workflows/dependabot-automerge.yml",
+              "blob": "f59a10c481690561c108a826da555395cb7f9092",
+              "commit": "a1100f8868e9022fd65d5cec29d43a60dc05d608",
+              "range": {
+                "start": 1,
+                "end": 4,
+                "hash": "510197b8be74d8731002163e2793fae41bace241"
+              }
+            }
+          }
+        },
+        "577f961059db": {
+          "text": "`publish.yml` runs on any push to `main` that touches `package.json`, so a version bump is a release. It ends green without publishing until the package is o...",
+          "line": 47,
+          "specs": [
+            ".github/workflows/publish.yml:21-25",
+            ".github/workflows/publish.yml:51-62"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            ".github/workflows/publish.yml": {
+              "path": ".github/workflows/publish.yml",
+              "blob": "072dd447913a2b78599cdf51d87abc02b9bb128c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 21,
+                "end": 25,
+                "hash": "83d6e2a8fe187f149208bf0b1a25a3966d463421"
+              }
+            },
+            ".github/workflows/publish.yml:51-62": {
+              "path": ".github/workflows/publish.yml",
+              "blob": "072dd447913a2b78599cdf51d87abc02b9bb128c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 51,
+                "end": 62,
+                "hash": "4d9ec291cc98506dafa4e394d18aace3c09a94fd"
+              }
+            }
+          }
+        },
+        "cbc12742cdb2": {
+          "text": "Tests that need `age`, `restic`, `gpg`, `zstd`, `xz`, `zip` or `jq` skip when the binary is missing, so a green local run can skip drill types that CI exerci...",
+          "line": 48,
+          "specs": [
+            "test/steps.test.mjs:30",
+            "test/tar.test.mjs:94",
+            "test/kit.test.mjs:179",
+            ".github/workflows/ci.yml:32-33"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "test/steps.test.mjs": {
+              "path": "test/steps.test.mjs",
+              "blob": "2a31e7066db2770d61241c3ab5313213390e331d",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 30,
+                "end": 30,
+                "hash": "f2a6d06857280ab49a4a8a087663899502434c92"
+              }
+            },
+            "test/tar.test.mjs": {
+              "path": "test/tar.test.mjs",
+              "blob": "690955a8aea84e4e2c04f1def310acdf11546a2f",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 94,
+                "end": 94,
+                "hash": "c79126080e00bbd43d55f25f69d11bfbd2fc590c"
+              }
+            },
+            "test/kit.test.mjs": {
+              "path": "test/kit.test.mjs",
+              "blob": "748cf2336d8842c3a28cd2fdeb108a703564be5f",
+              "commit": "04fd69ef78928701e82c32d8190e40781641f4d8",
+              "range": {
+                "start": 179,
+                "end": 179,
+                "hash": "ff09479882a45984c926edfaec136691b6c92238"
+              }
+            },
+            ".github/workflows/ci.yml": {
+              "path": ".github/workflows/ci.yml",
+              "blob": "c5407086eb07ddfe1a6866c63e03ca1feb7212d9",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 32,
+                "end": 33,
+                "hash": "c3bec3b3d4846f4f172a4beda44bd9ec7ba69c6d"
+              }
+            }
+          }
+        }
+      },
+      "pinnedAt": "2026-11-22T10:05:28.868Z",
+      "head": "be74313ced2a3aa08c284c812106c3953a9d8f26"
+    },
+    "restore-drill-architecture": {
+      "claims": {
+        "62c111a96c66": {
+          "text": "A zero-dependency Node 22 command line tool in ES modules. It runs as a short-lived process, with no daemon and no server. Each run reads a JSON config, rest...",
+          "line": 11,
+          "specs": [
+            "package.json#engines.node",
+            "package.json#type",
+            "README.md:5"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "package.json#engines.node": {
+              "path": "package.json",
+              "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "jsonKey": {
+                "key": "engines.node",
+                "hash": "02bc192b69d35e23c1375adfa8377c787dc525d5",
+                "value": "\">=22\""
+              }
+            },
+            "package.json#type": {
+              "path": "package.json",
+              "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "jsonKey": {
+                "key": "type",
+                "hash": "104552135e0a03cc60690d55ea338c29215ae902",
+                "value": "\"module\""
+              }
+            },
+            "README.md": {
+              "path": "README.md",
+              "blob": "6b478b134faa1204a3d597f2e25ddbe33e198f01",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 5,
+                "end": 5,
+                "hash": "8e638d4dfa171f618eb44e547649167a83879151"
+              }
+            }
+          }
+        },
+        "1ec0f3ea9861": {
+          "text": "`bin/restore-drill.mjs` calls `main` and sets the exit code.",
+          "line": 28,
+          "specs": [
+            "bin/restore-drill.mjs"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "bin/restore-drill.mjs": {
+              "path": "bin/restore-drill.mjs",
+              "blob": "7c5aaf52f15c7203f8ad3c6ddc576570a2655672",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa"
+            }
+          }
+        },
+        "9ef05087ec6e": {
+          "text": "`src/cli.mjs` parses arguments for `run`, `status`, `report`, `init` and `demo`, prints results and maps errors to exit codes: 2 for usage or config errors, ...",
+          "line": 29,
+          "specs": [
+            "src/cli.mjs:35-41",
+            "src/cli.mjs:73-96",
+            "src/cli.mjs:175-186"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/cli.mjs": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 35,
+                "end": 41,
+                "hash": "94e163803b55400dd133ebc4a827ee4c992f3fe0"
+              }
+            },
+            "src/cli.mjs:73-96": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 73,
+                "end": 96,
+                "hash": "b3f71cca6ffa430db5b0c1902b53a024cd0093ea"
+              }
+            },
+            "src/cli.mjs:175-186": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 175,
+                "end": 186,
+                "hash": "9c4d1cccb3fe7e7e157f6df324f31a9aa8a42939"
+              }
+            }
+          }
+        },
+        "a72bb22b0b68": {
+          "text": "`src/config.mjs` validates the config and rejects unknown options, with per-type allowed keys. Relative paths resolve against the config file.",
+          "line": 30,
+          "specs": [
+            "src/config.mjs:15-28",
+            "src/config.mjs:94",
+            "src/config.mjs:138-139"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/config.mjs": {
+              "path": "src/config.mjs",
+              "blob": "267c21f57fb8b5ceccbeff901009d92d19a26f53",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 15,
+                "end": 28,
+                "hash": "cf3042da3c0264aa3b5bb0f94770968b19d3d993"
+              }
+            },
+            "src/config.mjs:94-94": {
+              "path": "src/config.mjs",
+              "blob": "267c21f57fb8b5ceccbeff901009d92d19a26f53",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 94,
+                "end": 94,
+                "hash": "3fd20d00aab04a90e7e42a30a75b640e474d6cbd"
+              }
+            },
+            "src/config.mjs:138-139": {
+              "path": "src/config.mjs",
+              "blob": "267c21f57fb8b5ceccbeff901009d92d19a26f53",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 138,
+                "end": 139,
+                "hash": "61f7815f2e32fba04191da51deecabc1a7d56e34"
+              }
+            }
+          }
+        },
+        "6ffb53fc9f1d": {
+          "text": "`src/runner.mjs` runs each drill in a private temp dir with a timeout and retries, builds the result record, notifies, and installs the signal handlers.",
+          "line": 31,
+          "specs": [
+            "src/runner.mjs:26-86",
+            "src/runner.mjs:99-112",
+            "src/runner.mjs:114-136"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/runner.mjs": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 26,
+                "end": 86,
+                "hash": "f00d9b10b3f8579abdc9047bead669f81808356b"
+              }
+            },
+            "src/runner.mjs:99-112": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 99,
+                "end": 112,
+                "hash": "b30dbd751ba39b8c5fa3071d0a4ee5fb6aee8f2b"
+              }
+            },
+            "src/runner.mjs:114-136": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 114,
+                "end": 136,
+                "hash": "bfead5d91403a95661dd43021fffa96a4c2a9832"
+              }
+            }
+          }
+        },
+        "9d2496ef95b2": {
+          "text": "`src/drills/` holds one module per drill type: `file`, `sqlite`, `tar`, `restic`, `pg_dump` and `command`.",
+          "line": 32,
+          "specs": [
+            "src/runner.mjs:14"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/runner.mjs": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 14,
+                "end": 14,
+                "hash": "48098676082d48ce4e166fb140e6f5455080122d"
+              }
+            }
+          }
+        },
+        "f505dccf4842": {
+          "text": "`src/steps.mjs` finds the newest backup, applies the age, size and size-drop checks, then decrypts and decompresses into the temp dir.",
+          "line": 33,
+          "specs": [
+            "src/steps.mjs:1-2",
+            "src/steps.mjs:11-38",
+            "src/steps.mjs:55-118"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/steps.mjs": {
+              "path": "src/steps.mjs",
+              "blob": "410cd61da91bb9c5e3b250a05d7670e9f7a4d888",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 1,
+                "end": 2,
+                "hash": "2522207c67956a978cc9191ece88cebcc53bf957"
+              }
+            },
+            "src/steps.mjs:11-38": {
+              "path": "src/steps.mjs",
+              "blob": "410cd61da91bb9c5e3b250a05d7670e9f7a4d888",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 11,
+                "end": 38,
+                "hash": "4d9ae6b0e25c2bd125d757e2db9480544830200a"
+              }
+            },
+            "src/steps.mjs:55-118": {
+              "path": "src/steps.mjs",
+              "blob": "410cd61da91bb9c5e3b250a05d7670e9f7a4d888",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 55,
+                "end": 118,
+                "hash": "ddb0e83e46f1f3161967caaadaf24a0aec0bd893"
+              }
+            }
+          }
+        },
+        "afcc485a225e": {
+          "text": "`src/sqlite-worker.mjs` runs the SQLite checks in a separate process and also builds the demo database.",
+          "line": 34,
+          "specs": [
+            "src/sqlite-worker.mjs:1-3"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/sqlite-worker.mjs": {
+              "path": "src/sqlite-worker.mjs",
+              "blob": "2732dfe7dd2dc842bb295526543f2d15668a9c83",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 1,
+                "end": 3,
+                "hash": "b9f88c949817dc07f9d1bf24a87d494dcb5f8b2b"
+              }
+            }
+          }
+        },
+        "7f9163e7afe3": {
+          "text": "`src/util.mjs` holds duration and size parsing, glob expansion, temp dir handling, secret redaction and `exec`, the only place child processes are spawned.",
+          "line": 35,
+          "specs": [
+            "src/util.mjs:12-60",
+            "src/util.mjs:69-72",
+            "src/util.mjs:105-166",
+            "src/util.mjs:206-221",
+            "src/util.mjs:241-289"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/util.mjs": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 12,
+                "end": 60,
+                "hash": "6d0c64639780d2f29c2ddd8557f626083facb327"
+              }
+            },
+            "src/util.mjs:69-72": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 69,
+                "end": 72,
+                "hash": "0f8587e415201a99aa7a02ea64cbc41a2b313cda"
+              }
+            },
+            "src/util.mjs:105-166": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 105,
+                "end": 166,
+                "hash": "21624c6c8169d12c59a9f4613b16a4f55ecb738d"
+              }
+            },
+            "src/util.mjs:206-221": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 206,
+                "end": 221,
+                "hash": "dfe6cb40121b1c70115ebc8d5d9cd7d880199021"
+              }
+            },
+            "src/util.mjs:241-289": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 241,
+                "end": 289,
+                "hash": "a3f66da456b0e2354e7fb16f84b6462a813fbe0e"
+              }
+            }
+          }
+        },
+        "b040972c6229": {
+          "text": "`src/history.mjs` reads, appends and summarises results.",
+          "line": 36,
+          "specs": [
+            "src/history.mjs:4-49"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/history.mjs": {
+              "path": "src/history.mjs",
+              "blob": "4b23dae533059f5bee8f27bd3d4c2870d3108c2a",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 4,
+                "end": 49,
+                "hash": "8c606a68a8cad5e06eb86b070c68ab9da282c4f0"
+              }
+            }
+          }
+        },
+        "fbd4d3cdb4bb": {
+          "text": "`src/notify.mjs` sends webhook, ntfy and ping requests.",
+          "line": 37,
+          "specs": [
+            "src/notify.mjs:1-46"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/notify.mjs": {
+              "path": "src/notify.mjs",
+              "blob": "5bd4e87d71022b0ea852674ae8cad40a02a2a334",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 1,
+                "end": 46,
+                "hash": "63b7fe14967a3346a6cb5a1bd534ee83594ec4c2"
+              }
+            }
+          }
+        },
+        "b267399f87f1": {
+          "text": "`src/report.mjs` renders one self-contained HTML status page, and `src/demo.mjs` runs the four fake-backup demo.",
+          "line": 38,
+          "specs": [
+            "src/report.mjs:82-110",
+            "src/demo.mjs:54-105"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/report.mjs": {
+              "path": "src/report.mjs",
+              "blob": "74fa10e1900354e53d8bb5ff565e5de32155be47",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 82,
+                "end": 110,
+                "hash": "09830db887d023e14d2045107b4618de9799d6fe"
+              }
+            },
+            "src/demo.mjs": {
+              "path": "src/demo.mjs",
+              "blob": "f57250717a7079efd9f50212a9fee5d390715ea8",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 54,
+                "end": 105,
+                "hash": "846005c566c822a354bc6f2b7b0cb110850da463"
+              }
+            }
+          }
+        },
+        "670a519c93e8": {
+          "text": "`scripts/release.mjs` plans and annotates a release for `publish.yml`, and `scripts/make-hero.mjs` regenerates the README terminal image. Neither ships in th...",
+          "line": 39,
+          "specs": [
+            "scripts/release.mjs:1-12",
+            "scripts/make-hero.mjs:1-4",
+            "package.json#files"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "scripts/release.mjs": {
+              "path": "scripts/release.mjs",
+              "blob": "6cd841ca770ef7fe188e9a16ca9460074617eef8",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 1,
+                "end": 12,
+                "hash": "ee4da172e78841f070a77e2046e8d8260543e8d7"
+              }
+            },
+            "scripts/make-hero.mjs": {
+              "path": "scripts/make-hero.mjs",
+              "blob": "17412155ebddbe86fd9b99eb43f235d35b1a2f80",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 1,
+                "end": 4,
+                "hash": "97ed85663861cb17d396172f271275dcaa8a2c98"
+              }
+            },
+            "package.json#files": {
+              "path": "package.json",
+              "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "jsonKey": {
+                "key": "files",
+                "hash": "d73dd630ca951f2806456923f3a68f0df61e61a9",
+                "value": "[\"bin\",\"src\",\"examples\",\"docs\",\"LICENSE\",\"README.md\",\"CHANGELOG.md\"]"
+              }
+            }
+          }
+        },
+        "59252175f25c": {
+          "text": "`run` loads the config, optionally narrows to the `--only` drills, and reads prior history.",
+          "line": 43,
+          "specs": [
+            "src/cli.mjs:73-91",
+            "src/runner.mjs:114-117"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/cli.mjs": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 73,
+                "end": 91,
+                "hash": "793715cc6c87d744f1335851e507978f596dca19"
+              }
+            },
+            "src/runner.mjs": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 114,
+                "end": 117,
+                "hash": "c2a223a396b2d15a0d8fc460b8b8eef16ce7a122"
+              }
+            }
+          }
+        },
+        "25329c42183b": {
+          "text": "For each drill, the runner makes a temp dir with mode 700 under the OS temp dir and calls the drill module with a timeout signal.",
+          "line": 44,
+          "specs": [
+            "src/runner.mjs:27-37",
+            "src/util.mjs:206-211"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/runner.mjs": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 27,
+                "end": 37,
+                "hash": "11adb166f19f54f4a01b4036336dabd1e3d4ba73"
+              }
+            },
+            "src/util.mjs": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 206,
+                "end": 211,
+                "hash": "7e7af109c16b73e1e4bf7e720fe63e4604f6183a"
+              }
+            }
+          }
+        },
+        "a8a3179762ec": {
+          "text": "A file-based drill finds the newest match by modification time, then applies the empty, `max_age`, `min_size` and `size_drop` checks.",
+          "line": 45,
+          "specs": [
+            "src/steps.mjs:11-38",
+            "src/util.mjs:153-166"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/steps.mjs": {
+              "path": "src/steps.mjs",
+              "blob": "410cd61da91bb9c5e3b250a05d7670e9f7a4d888",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 11,
+                "end": 38,
+                "hash": "4d9ae6b0e25c2bd125d757e2db9480544830200a"
+              }
+            },
+            "src/util.mjs": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 153,
+                "end": 166,
+                "hash": "deac26306fb01086f7ed009baaa050cdc7378c62"
+              }
+            }
+          }
+        },
+        "91b1275dbada": {
+          "text": "Optional decrypt (age or gpg) and decompress (gz, zst, xz) write into the temp dir, then the drill's own check runs: SQLite checks on a private copy, `tar` l...",
+          "line": 46,
+          "specs": [
+            "src/steps.mjs:55-118",
+            "src/drills/sqlite.mjs:7-25",
+            "src/drills/tar.mjs:68-88",
+            "src/drills/restic.mjs:25-63",
+            "src/drills/pg_dump.mjs:79-95",
+            "src/drills/command.mjs:5-16"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/steps.mjs": {
+              "path": "src/steps.mjs",
+              "blob": "410cd61da91bb9c5e3b250a05d7670e9f7a4d888",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 55,
+                "end": 118,
+                "hash": "ddb0e83e46f1f3161967caaadaf24a0aec0bd893"
+              }
+            },
+            "src/drills/sqlite.mjs": {
+              "path": "src/drills/sqlite.mjs",
+              "blob": "2ceff24f283d1166e8c4e070246ab4b9d6c4b0cf",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 7,
+                "end": 25,
+                "hash": "79d60b6ac01045c2f9a747d297d469c6910c019f"
+              }
+            },
+            "src/drills/tar.mjs": {
+              "path": "src/drills/tar.mjs",
+              "blob": "8772dcd2d26d0ce921234290c201b08f1189dbd5",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 68,
+                "end": 88,
+                "hash": "66ad03deda974ffbc79cf1b79fbfa207d70c7907"
+              }
+            },
+            "src/drills/restic.mjs": {
+              "path": "src/drills/restic.mjs",
+              "blob": "36e406fec341317dc1826a5c8003a01e4ed6faf6",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 25,
+                "end": 63,
+                "hash": "5e909cd28c522d4f8a74db8d02555d313ff8bd29"
+              }
+            },
+            "src/drills/pg_dump.mjs": {
+              "path": "src/drills/pg_dump.mjs",
+              "blob": "b146e74961122f18bb623b498dc2063ad29b168c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 79,
+                "end": 95,
+                "hash": "452a0bb2e28387944b12376c94e8e78ea3bceee6"
+              }
+            },
+            "src/drills/command.mjs": {
+              "path": "src/drills/command.mjs",
+              "blob": "897c70ba259a1f2f8a431ba4e3e5b8d64ca5a79a",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 5,
+                "end": 16,
+                "hash": "8d958c32a68e1ae8412426657d4e07d61b5b0ea1"
+              }
+            }
+          }
+        },
+        "1ffcde04f1e3": {
+          "text": "The temp dir is removed whatever happened, and the record (ok, timing, backup path, size, mtime, redacted error capped at 4000 characters) is appended to his...",
+          "line": 47,
+          "specs": [
+            "src/runner.mjs:50-54",
+            "src/runner.mjs:72-85",
+            "src/runner.mjs:15",
+            "src/runner.mjs:124"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/runner.mjs": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 50,
+                "end": 54,
+                "hash": "5b1651fd090b19fc24468fc1ce4cd4467b19e1aa"
+              }
+            },
+            "src/runner.mjs:72-85": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 72,
+                "end": 85,
+                "hash": "3c1ab6a77e0b2fdd13b508fd4d6db774427af82e"
+              }
+            },
+            "src/runner.mjs:15-15": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 15,
+                "end": 15,
+                "hash": "181e15f7b1212aa81eddd257d6c657eb28255faa"
+              }
+            },
+            "src/runner.mjs:124-124": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 124,
+                "end": 124,
+                "hash": "982131a00179ad3d663540a6d5d5c6e6efa01ee7"
+              }
+            }
+          }
+        },
+        "88762425f037": {
+          "text": "A failure notifies by webhook and ntfy, and a pass after a failure sends a recovery notice. After the last drill one GET goes to `ping_success` or `ping_fail`.",
+          "line": 48,
+          "specs": [
+            "src/runner.mjs:130-135",
+            "src/notify.mjs:18-46"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/runner.mjs": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 130,
+                "end": 135,
+                "hash": "12218504b3b4d1e96201ded63e0cec7a6e880055"
+              }
+            },
+            "src/notify.mjs": {
+              "path": "src/notify.mjs",
+              "blob": "5bd4e87d71022b0ea852674ae8cad40a02a2a334",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 18,
+                "end": 46,
+                "hash": "bcf9551931a818f2fef145f62a6b2e189e4afc86"
+              }
+            }
+          }
+        },
+        "8ae5a1bca884": {
+          "text": "`status` and `report` read the same history and print a table or write the HTML page.",
+          "line": 49,
+          "specs": [
+            "src/cli.mjs:98-133"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/cli.mjs": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 98,
+                "end": 133,
+                "hash": "e5aba8311d8cec0473dd05dab08d1cec662f2371"
+              }
+            }
+          }
+        },
+        "f34a21d11c72": {
+          "text": "`<state>/history.jsonl` holds one JSON line per drill per run. The state directory is `--state`, then the config's `state`, then `.restore-drill` in the work...",
+          "line": 53,
+          "specs": [
+            "src/history.mjs:4-5",
+            "src/history.mjs:25-28",
+            "src/cli.mjs:46-50"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/history.mjs": {
+              "path": "src/history.mjs",
+              "blob": "4b23dae533059f5bee8f27bd3d4c2870d3108c2a",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 4,
+                "end": 5,
+                "hash": "f807f6269841d02e2a9269d4f3d01ee7416482cf"
+              }
+            },
+            "src/history.mjs:25-28": {
+              "path": "src/history.mjs",
+              "blob": "4b23dae533059f5bee8f27bd3d4c2870d3108c2a",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 25,
+                "end": 28,
+                "hash": "90e97e1d6af2178c75bc45fb4ad98db40369e80b"
+              }
+            },
+            "src/cli.mjs": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 46,
+                "end": 50,
+                "hash": "2c88e3fcaff077f0ae1b86e5092beaf663fe4f43"
+              }
+            }
+          }
+        },
+        "84821ae94dfa": {
+          "text": "A torn or hand-edited history line is skipped when reading.",
+          "line": 54,
+          "specs": [
+            "src/history.mjs:20"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/history.mjs": {
+              "path": "src/history.mjs",
+              "blob": "4b23dae533059f5bee8f27bd3d4c2870d3108c2a",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 20,
+                "end": 20,
+                "hash": "5973a0cd1324c240577bb4bee9a478be7159c531"
+              }
+            }
+          }
+        },
+        "19e61c041ca2": {
+          "text": "Temp dirs hold decrypted, decompressed and restored copies for one attempt. They are never the source, and are always removed.",
+          "line": 55,
+          "specs": [
+            "src/util.mjs:206-220",
+            "src/runner.mjs:50-54"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/util.mjs": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 206,
+                "end": 220,
+                "hash": "cf9a829cb83a6a822e30ff10edec8a8f21e890f5"
+              }
+            },
+            "src/runner.mjs": {
+              "path": "src/runner.mjs",
+              "blob": "94ed7513ab6071ab048f598d199f87ff45e19571",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 50,
+                "end": 54,
+                "hash": "5b1651fd090b19fc24468fc1ce4cd4467b19e1aa"
+              }
+            }
+          }
+        },
+        "b1b17efe300b": {
+          "text": "The tool writes no database and keeps no cache. The only other output is the HTML file `report` writes, or `init` writes for a config.",
+          "line": 56,
+          "specs": [
+            "src/cli.mjs:126-143"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/cli.mjs": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 126,
+                "end": 143,
+                "hash": "124c4cdbf2196746601879c1ae3a165af22d4bb2"
+              }
+            }
+          }
+        },
+        "4afa28c17c8d": {
+          "text": "No login and no listener: it is a local command that opens no port. Access is whatever the user running it has on the backup paths, the restic repository and...",
+          "line": 60,
+          "specs": [
+            "src/cli.mjs",
+            "src/notify.mjs"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/cli.mjs": {
+              "path": "src/cli.mjs",
+              "blob": "becda666a8cfb69a6a7f7e83b4f3df006a1f8845",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a"
+            },
+            "src/notify.mjs": {
+              "path": "src/notify.mjs",
+              "blob": "5bd4e87d71022b0ea852674ae8cad40a02a2a334",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa"
+            }
+          }
+        },
+        "a64ffcc412d3": {
+          "text": "Secrets are masked in output and history: credentials in URLs, the restic password and the database password. Notification URLs never appear in output.",
+          "line": 62,
+          "specs": [
+            "src/util.mjs:68-73",
+            "src/drills/restic.mjs:17-23",
+            "src/drills/pg_dump.mjs:20-24",
+            "src/notify.mjs:3-14"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/util.mjs": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 68,
+                "end": 73,
+                "hash": "3c54906239a38a0282afa5423860d21fcbb8c44b"
+              }
+            },
+            "src/drills/restic.mjs": {
+              "path": "src/drills/restic.mjs",
+              "blob": "36e406fec341317dc1826a5c8003a01e4ed6faf6",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 17,
+                "end": 23,
+                "hash": "ab00f239d0e4221e507fa4364ac5d401c2eaaaaa"
+              }
+            },
+            "src/drills/pg_dump.mjs": {
+              "path": "src/drills/pg_dump.mjs",
+              "blob": "b146e74961122f18bb623b498dc2063ad29b168c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 20,
+                "end": 24,
+                "hash": "fc16d83cabfa8f98099b3a3d656863017839c2b6"
+              }
+            },
+            "src/notify.mjs": {
+              "path": "src/notify.mjs",
+              "blob": "5bd4e87d71022b0ea852674ae8cad40a02a2a334",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 3,
+                "end": 14,
+                "hash": "92175320d8a3052fceebf0a2e96e91bcab558db0"
+              }
+            }
+          }
+        },
+        "6da75c08feb3": {
+          "text": "Binaries it runs: `tar`, `unzip`, `age`, `gpg`, `zstd`, `xz`, `restic`, `pg_restore`, `psql`, and `/bin/sh` for a string `command`. A missing one fails that ...",
+          "line": 66,
+          "specs": [
+            "src/drills/tar.mjs:74-80",
+            "src/steps.mjs:61-67",
+            "src/steps.mjs:94",
+            "src/drills/restic.mjs:34",
+            "src/drills/pg_dump.mjs:27",
+            "src/drills/pg_dump.mjs:44",
+            "src/drills/pg_dump.mjs:81",
+            "src/drills/pg_dump.mjs:91",
+            "src/drills/command.mjs:11",
+            "src/util.mjs:276-277"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/drills/tar.mjs": {
+              "path": "src/drills/tar.mjs",
+              "blob": "8772dcd2d26d0ce921234290c201b08f1189dbd5",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 74,
+                "end": 80,
+                "hash": "753bc436784c095e1ed537e1ecd8b25e35ee6da9"
+              }
+            },
+            "src/steps.mjs": {
+              "path": "src/steps.mjs",
+              "blob": "410cd61da91bb9c5e3b250a05d7670e9f7a4d888",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 61,
+                "end": 67,
+                "hash": "cac63ac0c2c5244742a90d625d14de34865e1f7a"
+              }
+            },
+            "src/steps.mjs:94-94": {
+              "path": "src/steps.mjs",
+              "blob": "410cd61da91bb9c5e3b250a05d7670e9f7a4d888",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 94,
+                "end": 94,
+                "hash": "08efbf149e870f40f5b51bec9488b2da4c716d0c"
+              }
+            },
+            "src/drills/restic.mjs": {
+              "path": "src/drills/restic.mjs",
+              "blob": "36e406fec341317dc1826a5c8003a01e4ed6faf6",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 34,
+                "end": 34,
+                "hash": "60cac1926ad1f796941df8476f0628e7cc6e6c9d"
+              }
+            },
+            "src/drills/pg_dump.mjs": {
+              "path": "src/drills/pg_dump.mjs",
+              "blob": "b146e74961122f18bb623b498dc2063ad29b168c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 27,
+                "end": 27,
+                "hash": "c8812d5dddbb5ffe21990cbfc603cc941f4195a1"
+              }
+            },
+            "src/drills/pg_dump.mjs:44-44": {
+              "path": "src/drills/pg_dump.mjs",
+              "blob": "b146e74961122f18bb623b498dc2063ad29b168c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 44,
+                "end": 44,
+                "hash": "08e5b5cf77f4ca6ad5bc695ed4abe9d131ff2a82"
+              }
+            },
+            "src/drills/pg_dump.mjs:81-81": {
+              "path": "src/drills/pg_dump.mjs",
+              "blob": "b146e74961122f18bb623b498dc2063ad29b168c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 81,
+                "end": 81,
+                "hash": "634005d1dc8a381251f8573364a58d7d9ed39e2c"
+              }
+            },
+            "src/drills/pg_dump.mjs:91-91": {
+              "path": "src/drills/pg_dump.mjs",
+              "blob": "b146e74961122f18bb623b498dc2063ad29b168c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 91,
+                "end": 91,
+                "hash": "1e2edd5c40a8c5b66aa879c53f84a68818c9ab22"
+              }
+            },
+            "src/drills/command.mjs": {
+              "path": "src/drills/command.mjs",
+              "blob": "897c70ba259a1f2f8a431ba4e3e5b8d64ca5a79a",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 11,
+                "end": 11,
+                "hash": "88dde81ba39e4eabdda559bf677c0eb4081ea0cf"
+              }
+            },
+            "src/util.mjs": {
+              "path": "src/util.mjs",
+              "blob": "08afa5f28d7efe41782a5a388a9ccbcf64c66d54",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 276,
+                "end": 277,
+                "hash": "f2426905cb54428ee35041cf574017c1fe270e96"
+              }
+            }
+          }
+        },
+        "1666f127339c": {
+          "text": "restic reads `RESTIC_PASSWORD`, `RESTIC_PASSWORD_FILE` and `RESTIC_PASSWORD_COMMAND` from the environment, or the variable a drill names in `password_env`.",
+          "line": 67,
+          "specs": [
+            "src/drills/restic.mjs:6-23"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/drills/restic.mjs": {
+              "path": "src/drills/restic.mjs",
+              "blob": "36e406fec341317dc1826a5c8003a01e4ed6faf6",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 6,
+                "end": 23,
+                "hash": "847fde9e386ddfdf57917ebb757906eeaf023eb4"
+              }
+            }
+          }
+        },
+        "72c3371103dc": {
+          "text": "The `pg_dump` drill with `restore_url` passes `PGHOST`, `PGPORT`, `PGUSER`, `PGPASSWORD` and `PGSSLMODE` to `psql` and `pg_restore`.",
+          "line": 68,
+          "specs": [
+            "src/drills/pg_dump.mjs:7-18"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/drills/pg_dump.mjs": {
+              "path": "src/drills/pg_dump.mjs",
+              "blob": "b146e74961122f18bb623b498dc2063ad29b168c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 7,
+                "end": 18,
+                "hash": "2905f295ab8316f1303a8f418b18f534afc1a945"
+              }
+            }
+          }
+        },
+        "b64f31cf329f": {
+          "text": "Notification URLs come from the config's `notify` block (`webhook`, `ping_success`, `ping_fail`, `ntfy`), each an http or https URL, with a 10 second timeout...",
+          "line": 69,
+          "specs": [
+            "src/config.mjs:29",
+            "src/config.mjs:160-169",
+            "src/notify.mjs:1-14"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "src/config.mjs": {
+              "path": "src/config.mjs",
+              "blob": "267c21f57fb8b5ceccbeff901009d92d19a26f53",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 29,
+                "end": 29,
+                "hash": "0b10119dee0792d6785265dfd3fac71149a67d96"
+              }
+            },
+            "src/config.mjs:160-169": {
+              "path": "src/config.mjs",
+              "blob": "267c21f57fb8b5ceccbeff901009d92d19a26f53",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 160,
+                "end": 169,
+                "hash": "4671b4ac732e1b77b4e7193ca15764735da4c883"
+              }
+            },
+            "src/notify.mjs": {
+              "path": "src/notify.mjs",
+              "blob": "5bd4e87d71022b0ea852674ae8cad40a02a2a334",
+              "commit": "d376eb5f86f91f5902bf12b619ab6ed3dced9cfa",
+              "range": {
+                "start": 1,
+                "end": 14,
+                "hash": "d370e3f53d8a42321568d92daa801b60a8c9cac7"
+              }
+            }
+          }
+        },
+        "f7609b9a708d": {
+          "text": "The npm registry and the GitHub CLI are used only by `scripts/release.mjs` in CI. `publish.yml` reads the `NPM_TOKEN` secret, or uses npm trusted publishing.",
+          "line": 70,
+          "specs": [
+            "scripts/release.mjs:83-93",
+            ".github/workflows/publish.yml:7-15",
+            ".github/workflows/publish.yml:51-90"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            "scripts/release.mjs": {
+              "path": "scripts/release.mjs",
+              "blob": "6cd841ca770ef7fe188e9a16ca9460074617eef8",
+              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "range": {
+                "start": 83,
+                "end": 93,
+                "hash": "631e461f6ff7fc3de66ab0f12544df93e5bbc26b"
+              }
+            },
+            ".github/workflows/publish.yml": {
+              "path": ".github/workflows/publish.yml",
+              "blob": "072dd447913a2b78599cdf51d87abc02b9bb128c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 7,
+                "end": 15,
+                "hash": "128560442c5745f4879b63de2adfb37ffafe85c4"
+              }
+            },
+            ".github/workflows/publish.yml:51-90": {
+              "path": ".github/workflows/publish.yml",
+              "blob": "072dd447913a2b78599cdf51d87abc02b9bb128c",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 51,
+                "end": 90,
+                "hash": "1ad1f76a467f3905677f9d35a77b1cf7d29066f1"
+              }
+            }
+          }
+        },
+        "6e9af294c5a5": {
+          "text": "CI runs `node --test` on Node 22 and 24, weekly and on every push and pull request. `upkeep.yml` checks README links with lychee and runs `dossier-scribe` we...",
+          "line": 71,
+          "specs": [
+            ".github/workflows/ci.yml:3-12",
+            ".github/workflows/ci.yml:34",
+            ".github/workflows/upkeep.yml:1-3",
+            ".github/workflows/upkeep.yml:25-32",
+            ".github/workflows/upkeep.yml:62-70"
+          ],
+          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "files": {
+            ".github/workflows/ci.yml": {
+              "path": ".github/workflows/ci.yml",
+              "blob": "c5407086eb07ddfe1a6866c63e03ca1feb7212d9",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 3,
+                "end": 12,
+                "hash": "f9642124e6a3c8943f6611275d3189729405fde2"
+              }
+            },
+            ".github/workflows/ci.yml:34-34": {
+              "path": ".github/workflows/ci.yml",
+              "blob": "c5407086eb07ddfe1a6866c63e03ca1feb7212d9",
+              "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
+              "range": {
+                "start": 34,
+                "end": 34,
+                "hash": "d77f637e7217eacf4b0809ff6b592af5b9ea60de"
+              }
+            },
+            ".github/workflows/upkeep.yml": {
+              "path": ".github/workflows/upkeep.yml",
+              "blob": "8bfe01f5e552f692fa41c68c3f75f84697c98f5b",
+              "commit": "98c0b990300f062f23bc79c6a329dfc23145b2c7",
+              "range": {
+                "start": 1,
+                "end": 3,
+                "hash": "2b39aa767e03d986cdf1312a33898fa2a3c17a35"
+              }
+            },
+            ".github/workflows/upkeep.yml:25-32": {
+              "path": ".github/workflows/upkeep.yml",
+              "blob": "8bfe01f5e552f692fa41c68c3f75f84697c98f5b",
+              "commit": "98c0b990300f062f23bc79c6a329dfc23145b2c7",
+              "range": {
+                "start": 25,
+                "end": 32,
+                "hash": "c02a97501dc1a8db4984cb6a78230afe71ed16b2"
+              }
+            },
+            ".github/workflows/upkeep.yml:62-70": {
+              "path": ".github/workflows/upkeep.yml",
+              "blob": "8bfe01f5e552f692fa41c68c3f75f84697c98f5b",
+              "commit": "98c0b990300f062f23bc79c6a329dfc23145b2c7",
+              "range": {
+                "start": 62,
+                "end": 70,
+                "hash": "5867cc161aa1325e71ec4c64b35ecc3297c8d819"
+              }
+            }
+          }
+        }
+      },
+      "pinnedAt": "2026-11-22T10:05:28.954Z",
+      "head": "be74313ced2a3aa08c284c812106c3953a9d8f26"
     }
   }
 }
