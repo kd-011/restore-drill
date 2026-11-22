@@ -3,7 +3,7 @@ slug: restore-drill
 name: restore-drill
 repo: .
 status: active
-last_verified: 2026-11-03
+last_verified: 2026-11-22
 tags: [cli, node, backups]
 ---
 

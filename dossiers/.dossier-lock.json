@@ -10,7 +10,7 @@
             "package.json:12",
             "package.json:14"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "package.json": {
               "path": "package.json",
@@ -40,7 +40,7 @@
           "specs": [
             "package.json"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "package.json": {
               "path": "package.json",
@@ -55,7 +55,7 @@
           "specs": [
             "src/config.mjs:36-42"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/config.mjs": {
               "path": "src/config.mjs",
@@ -77,7 +77,7 @@
             "src/steps.mjs:29-31",
             "src/history.mjs:43"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/config.mjs": {
               "path": "src/config.mjs",
@@ -118,7 +118,7 @@
             "src/drills/sqlite.mjs:13-17",
             "src/sqlite-worker.mjs:17"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/drills/sqlite.mjs": {
               "path": "src/drills/sqlite.mjs",
@@ -149,7 +149,7 @@
             "src/drills/restic.mjs:27",
             "src/drills/restic.mjs:62"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/drills/restic.mjs": {
               "path": "src/drills/restic.mjs",
@@ -181,7 +181,7 @@
             "src/drills/pg_dump.mjs:23",
             "src/drills/pg_dump.mjs:63-68"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/drills/pg_dump.mjs": {
               "path": "src/drills/pg_dump.mjs",
@@ -221,7 +221,7 @@
           "specs": [
             "src/cli.mjs:93-95"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -241,7 +241,7 @@
           "specs": [
             "src/util.mjs:206-208"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/util.mjs": {
               "path": "src/util.mjs",
@@ -262,7 +262,7 @@
             "src/runner.mjs:103-109",
             "src/util.mjs:222"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -293,7 +293,7 @@
             "src/history.mjs:4",
             "src/cli.mjs:46-50"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/history.mjs": {
               "path": "src/history.mjs",
@@ -324,7 +324,7 @@
             ".github/workflows/ci.yml:9-10",
             ".github/workflows/ci.yml:24"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             ".github/workflows/ci.yml": {
               "path": ".github/workflows/ci.yml",
@@ -355,7 +355,7 @@
             ".github/dependabot.yml",
             ".github/scripts/automerge-eligible.mjs"
           ],
-          "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             ".github/dependabot.yml": {
               "path": ".github/dependabot.yml",
@@ -370,8 +370,8 @@
           }
         }
       },
-      "pinnedAt": "2026-11-03T07:34:29.988Z",
-      "head": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a"
+      "pinnedAt": "2026-11-22T20:15:52.563Z",
+      "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993"
     },
     "restore-drill-agents": {
       "claims": {
@@ -381,7 +381,7 @@
           "specs": [
             "package.json"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "package.json": {
               "path": "package.json",
@@ -396,7 +396,7 @@
           "specs": [
             "package.json:15"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "package.json": {
               "path": "package.json",
@@ -416,7 +416,7 @@
           "specs": [
             "CONTRIBUTING.md:13-17"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -438,7 +438,7 @@
             "src/cli.mjs:35-41",
             "src/demo.mjs:54-105"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "bin/restore-drill.mjs": {
               "path": "bin/restore-drill.mjs",
@@ -473,7 +473,7 @@
           "specs": [
             "package.json:15"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "package.json": {
               "path": "package.json",
@@ -494,7 +494,7 @@
             "scripts/release.mjs:1-12",
             "scripts/release.mjs:33-35"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "scripts/release.mjs": {
               "path": "scripts/release.mjs",
@@ -524,7 +524,7 @@
           "specs": [
             "scripts/make-hero.mjs:1-4"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "scripts/make-hero.mjs": {
               "path": "scripts/make-hero.mjs",
@@ -545,7 +545,7 @@
             "dossier-scribe.json",
             ".github/workflows/upkeep.yml:62-70"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "dossier-scribe.json": {
               "path": "dossier-scribe.json",
@@ -571,7 +571,7 @@
             "CONTRIBUTING.md:7",
             "package.json:14"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -601,7 +601,7 @@
           "specs": [
             "CONTRIBUTING.md:8"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -621,7 +621,7 @@
           "specs": [
             "CONTRIBUTING.md:9"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -641,7 +641,7 @@
           "specs": [
             "CONTRIBUTING.md:10"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -665,7 +665,7 @@
             "src/util.mjs:1-5",
             "test-support/helpers.mjs:1-2"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -721,7 +721,7 @@
             "src/drills/command.mjs:5-16",
             "src/util.mjs:6-7"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/drills/command.mjs": {
               "path": "src/drills/command.mjs",
@@ -752,7 +752,7 @@
             "CONTRIBUTING.md:21-39",
             ".github/PULL_REQUEST_TEMPLATE.md"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -777,7 +777,7 @@
           "specs": [
             ".github/workflows/publish.yml:1-6"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             ".github/workflows/publish.yml": {
               "path": ".github/workflows/publish.yml",
@@ -796,59 +796,59 @@
           "line": 37,
           "specs": [
             "test/hygiene.test.mjs:14-23",
-            "test/hygiene.test.mjs:43-62"
+            "test/hygiene.test.mjs:45-64"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "test/hygiene.test.mjs": {
               "path": "test/hygiene.test.mjs",
-              "blob": "96e939de413da2c64a11e7f81d4c9664207e0c5c",
-              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "blob": "9dea8b1ddd9bcacd202e2cf89862d3bb1cf73af2",
+              "commit": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
               "range": {
                 "start": 14,
                 "end": 23,
                 "hash": "dfdb52ebf1ac203ba09dbde375749d4932850104"
               }
             },
-            "test/hygiene.test.mjs:43-62": {
+            "test/hygiene.test.mjs:45-64": {
               "path": "test/hygiene.test.mjs",
-              "blob": "96e939de413da2c64a11e7f81d4c9664207e0c5c",
-              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "blob": "9dea8b1ddd9bcacd202e2cf89862d3bb1cf73af2",
+              "commit": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
               "range": {
-                "start": 43,
-                "end": 62,
+                "start": 45,
+                "end": 64,
                 "hash": "a769e9657e84ccc480bb7ba02001e8cc7ab95c17"
               }
             }
           }
         },
-        "190c55c58616": {
+        "775ac3f88458": {
           "text": "The same file checks every commit: author must be `kd-011` or `KD011` with a `users.noreply.github.com` email, and a message containing `claude`, `anthropic`...",
           "line": 38,
           "specs": [
-            "test/hygiene.test.mjs:41",
-            "test/hygiene.test.mjs:67-86"
+            "test/hygiene.test.mjs:41-43",
+            "test/hygiene.test.mjs:69-88"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "test/hygiene.test.mjs": {
               "path": "test/hygiene.test.mjs",
-              "blob": "96e939de413da2c64a11e7f81d4c9664207e0c5c",
-              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "blob": "9dea8b1ddd9bcacd202e2cf89862d3bb1cf73af2",
+              "commit": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
               "range": {
                 "start": 41,
-                "end": 41,
-                "hash": "9b976b66dcef8be6ad023db8715ff649a698a841"
+                "end": 43,
+                "hash": "9eb835c24b42a1cddd7b263df0c82eeb89a54f06"
               }
             },
-            "test/hygiene.test.mjs:67-86": {
+            "test/hygiene.test.mjs:69-88": {
               "path": "test/hygiene.test.mjs",
-              "blob": "96e939de413da2c64a11e7f81d4c9664207e0c5c",
-              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "blob": "9dea8b1ddd9bcacd202e2cf89862d3bb1cf73af2",
+              "commit": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
               "range": {
-                "start": 67,
-                "end": 86,
-                "hash": "17ba4e2e52fe262741a05e27ab16113b6e95d075"
+                "start": 69,
+                "end": 88,
+                "hash": "d5d8d283d0d1810df1ea13183a4ebe03b775635f"
               }
             }
           }
@@ -859,9 +859,9 @@
           "specs": [
             ".gitignore",
             "src/cli.mjs:46-50",
-            "test/hygiene.test.mjs:43-49"
+            "test/hygiene.test.mjs:45-51"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             ".gitignore": {
               "path": ".gitignore",
@@ -880,11 +880,11 @@
             },
             "test/hygiene.test.mjs": {
               "path": "test/hygiene.test.mjs",
-              "blob": "96e939de413da2c64a11e7f81d4c9664207e0c5c",
-              "commit": "8eee0b02d062ccf8847ea2fd0a68ea8edb7b529a",
+              "blob": "9dea8b1ddd9bcacd202e2cf89862d3bb1cf73af2",
+              "commit": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
               "range": {
-                "start": 43,
-                "end": 49,
+                "start": 45,
+                "end": 51,
                 "hash": "0bd16a28767efe442fe3bf477d29118a3b32590e"
               }
             }
@@ -897,7 +897,7 @@
             "src/config.mjs:12-28",
             "src/config.mjs:94"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/config.mjs": {
               "path": "src/config.mjs",
@@ -928,7 +928,7 @@
             "test/examples.test.mjs:11-15",
             "src/cli.mjs:135-143"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "test/examples.test.mjs": {
               "path": "test/examples.test.mjs",
@@ -959,7 +959,7 @@
             "src/runner.mjs:118-120",
             "src/steps.mjs:29-31"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -989,7 +989,7 @@
           "specs": [
             "src/runner.mjs:133-135"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1010,7 +1010,7 @@
             "src/drills/sqlite.mjs:5-16",
             "src/sqlite-worker.mjs:1-3"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/drills/sqlite.mjs": {
               "path": "src/drills/sqlite.mjs",
@@ -1042,7 +1042,7 @@
             "src/util.mjs:241-289",
             "src/runner.mjs:99-112"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/util.mjs": {
               "path": "src/util.mjs",
@@ -1084,7 +1084,7 @@
             ".github/rulesets/main.json:13-20",
             ".github/workflows/dependabot-automerge.yml:1-4"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             ".github/workflows/ci.yml": {
               "path": ".github/workflows/ci.yml",
@@ -1125,7 +1125,7 @@
             ".github/workflows/publish.yml:21-25",
             ".github/workflows/publish.yml:51-62"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             ".github/workflows/publish.yml": {
               "path": ".github/workflows/publish.yml",
@@ -1158,7 +1158,7 @@
             "test/kit.test.mjs:179",
             ".github/workflows/ci.yml:32-33"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "test/steps.test.mjs": {
               "path": "test/steps.test.mjs",
@@ -1208,7 +1208,7 @@
           "specs": [
             ".github/workflows/upkeep.yml:62"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             ".github/workflows/upkeep.yml": {
               "path": ".github/workflows/upkeep.yml",
@@ -1223,8 +1223,8 @@
           }
         }
       },
-      "pinnedAt": "2026-11-22T10:05:58.498Z",
-      "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629"
+      "pinnedAt": "2026-11-22T20:15:52.540Z",
+      "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993"
     },
     "restore-drill-architecture": {
       "claims": {
@@ -1236,7 +1236,7 @@
             "package.json:5",
             "README.md:5"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "package.json": {
               "path": "package.json",
@@ -1276,7 +1276,7 @@
           "specs": [
             "bin/restore-drill.mjs"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "bin/restore-drill.mjs": {
               "path": "bin/restore-drill.mjs",
@@ -1293,7 +1293,7 @@
             "src/cli.mjs:73-96",
             "src/cli.mjs:175-186"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -1335,7 +1335,7 @@
             "src/config.mjs:94",
             "src/config.mjs:138-139"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/config.mjs": {
               "path": "src/config.mjs",
@@ -1377,7 +1377,7 @@
             "src/runner.mjs:99-112",
             "src/runner.mjs:114-136"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1417,7 +1417,7 @@
           "specs": [
             "src/runner.mjs:14"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1439,7 +1439,7 @@
             "src/steps.mjs:11-38",
             "src/steps.mjs:55-118"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/steps.mjs": {
               "path": "src/steps.mjs",
@@ -1479,7 +1479,7 @@
           "specs": [
             "src/sqlite-worker.mjs:1-3"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/sqlite-worker.mjs": {
               "path": "src/sqlite-worker.mjs",
@@ -1503,7 +1503,7 @@
             "src/util.mjs:206-221",
             "src/util.mjs:241-289"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/util.mjs": {
               "path": "src/util.mjs",
@@ -1563,7 +1563,7 @@
           "specs": [
             "src/history.mjs:4-49"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/history.mjs": {
               "path": "src/history.mjs",
@@ -1583,7 +1583,7 @@
           "specs": [
             "src/notify.mjs:1-46"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/notify.mjs": {
               "path": "src/notify.mjs",
@@ -1604,7 +1604,7 @@
             "src/report.mjs:82-110",
             "src/demo.mjs:54-105"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/report.mjs": {
               "path": "src/report.mjs",
@@ -1636,7 +1636,7 @@
             "scripts/make-hero.mjs:1-4",
             "package.json:13"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "scripts/release.mjs": {
               "path": "scripts/release.mjs",
@@ -1677,7 +1677,7 @@
             "src/cli.mjs:73-91",
             "src/runner.mjs:114-117"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -1708,7 +1708,7 @@
             "src/runner.mjs:27-37",
             "src/util.mjs:206-211"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1739,7 +1739,7 @@
             "src/steps.mjs:11-38",
             "src/util.mjs:153-166"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/steps.mjs": {
               "path": "src/steps.mjs",
@@ -1774,7 +1774,7 @@
             "src/drills/pg_dump.mjs:79-95",
             "src/drills/command.mjs:5-16"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/steps.mjs": {
               "path": "src/steps.mjs",
@@ -1847,7 +1847,7 @@
             "src/runner.mjs:15",
             "src/runner.mjs:124"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1898,7 +1898,7 @@
             "src/runner.mjs:130-135",
             "src/notify.mjs:18-46"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1928,7 +1928,7 @@
           "specs": [
             "src/cli.mjs:98-133"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -1950,7 +1950,7 @@
             "src/history.mjs:25-28",
             "src/cli.mjs:46-50"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/history.mjs": {
               "path": "src/history.mjs",
@@ -1990,7 +1990,7 @@
           "specs": [
             "src/history.mjs:20"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/history.mjs": {
               "path": "src/history.mjs",
@@ -2011,7 +2011,7 @@
             "src/util.mjs:206-220",
             "src/runner.mjs:50-54"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/util.mjs": {
               "path": "src/util.mjs",
@@ -2041,7 +2041,7 @@
           "specs": [
             "src/cli.mjs:126-143"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -2062,7 +2062,7 @@
             "src/cli.mjs",
             "src/notify.mjs"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -2085,7 +2085,7 @@
             "src/drills/pg_dump.mjs:20-24",
             "src/notify.mjs:3-14"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/util.mjs": {
               "path": "src/util.mjs",
@@ -2144,7 +2144,7 @@
             "src/drills/command.mjs:11",
             "src/util.mjs:276-277"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/drills/tar.mjs": {
               "path": "src/drills/tar.mjs",
@@ -2254,7 +2254,7 @@
           "specs": [
             "src/drills/restic.mjs:6-23"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/drills/restic.mjs": {
               "path": "src/drills/restic.mjs",
@@ -2274,7 +2274,7 @@
           "specs": [
             "src/drills/pg_dump.mjs:7-18"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/drills/pg_dump.mjs": {
               "path": "src/drills/pg_dump.mjs",
@@ -2296,7 +2296,7 @@
             "src/config.mjs:160-169",
             "src/notify.mjs:1-14"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "src/config.mjs": {
               "path": "src/config.mjs",
@@ -2338,7 +2338,7 @@
             ".github/workflows/publish.yml:7-15",
             ".github/workflows/publish.yml:51-90"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             "scripts/release.mjs": {
               "path": "scripts/release.mjs",
@@ -2382,7 +2382,7 @@
             ".github/workflows/upkeep.yml:25-32",
             ".github/workflows/upkeep.yml:62-70"
           ],
-          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993",
           "files": {
             ".github/workflows/ci.yml": {
               "path": ".github/workflows/ci.yml",
@@ -2437,8 +2437,8 @@
           }
         }
       },
-      "pinnedAt": "2026-11-22T10:05:49.781Z",
-      "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629"
+      "pinnedAt": "2026-11-22T20:15:52.554Z",
+      "head": "f195d4e1557b51af1ec09e348d99a33b7f78f993"
     }
   }
 }
