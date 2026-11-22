@@ -8,7 +8,7 @@ last_verified: 2026-11-22
 
 # restore-drill: how it is built
 
-A zero-dependency Node 22 command line tool in ES modules. It runs as a short-lived process, with no daemon and no server. Each run reads a JSON config, restores the newest backup of each drill into a temp dir by calling the real tools, and appends one result line per drill to a history file. <!-- src: package.json#engines.node, package.json#type, README.md:5 -->
+A zero-dependency Node 22 command line tool in ES modules. It runs as a short-lived process, with no daemon and no server. Each run reads a JSON config, restores the newest backup of each drill into a temp dir by calling the real tools, and appends one result line per drill to a history file. <!-- src: package.json:14, package.json:5, README.md:5 -->
 
 ```mermaid
 flowchart LR
@@ -36,7 +36,7 @@ flowchart LR
 - `src/history.mjs` reads, appends and summarises results. <!-- src: src/history.mjs:4-49 -->
 - `src/notify.mjs` sends webhook, ntfy and ping requests. <!-- src: src/notify.mjs:1-46 -->
 - `src/report.mjs` renders one self-contained HTML status page, and `src/demo.mjs` runs the four fake-backup demo. <!-- src: src/report.mjs:82-110, src/demo.mjs:54-105 -->
-- `scripts/release.mjs` plans and annotates a release for `publish.yml`, and `scripts/make-hero.mjs` regenerates the README terminal image. Neither ships in the npm package. <!-- src: scripts/release.mjs:1-12, scripts/make-hero.mjs:1-4, package.json#files -->
+- `scripts/release.mjs` plans and annotates a release for `publish.yml`, and `scripts/make-hero.mjs` regenerates the README terminal image. Neither ships in the npm package. <!-- src: scripts/release.mjs:1-12, scripts/make-hero.mjs:1-4, package.json:13 -->
 
 ## Data flow
 
@@ -73,3 +73,10 @@ Secrets are masked in output and history: credentials in URLs, the restic passwo
 ## Unverified
 
 - Behaviour on Windows, macOS, Borg, a restic repository over the network, or any Postgres other than 16. The README and reference say these are untested; the code was not run against them here.
+
+## Generated facts
+
+<!-- auto:start -->
+- package: restore-drill 0.2.0
+- npm scripts (1): test
+<!-- auto:end -->

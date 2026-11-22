@@ -381,7 +381,7 @@
           "specs": [
             "package.json"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "package.json": {
               "path": "package.json",
@@ -394,18 +394,18 @@
           "text": "Test everything: `node --test`.",
           "line": 16,
           "specs": [
-            "package.json#scripts.test"
+            "package.json:15"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
-            "package.json#scripts.test": {
+            "package.json": {
               "path": "package.json",
               "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
               "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
-              "jsonKey": {
-                "key": "scripts.test",
-                "hash": "d81653e8dc31c80ca8b4ff59a118d16301d68cfc",
-                "value": "\"node --test\""
+              "range": {
+                "start": 15,
+                "end": 15,
+                "hash": "d8ddd3c8b69e0ab01ce8757e58c5094574634b87"
               }
             }
           }
@@ -416,7 +416,7 @@
           "specs": [
             "CONTRIBUTING.md:13-17"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -438,7 +438,7 @@
             "src/cli.mjs:35-41",
             "src/demo.mjs:54-105"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "bin/restore-drill.mjs": {
               "path": "bin/restore-drill.mjs",
@@ -471,18 +471,18 @@
           "text": "There is no lint, format or typecheck script.",
           "line": 19,
           "specs": [
-            "package.json#scripts"
+            "package.json:15"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
-            "package.json#scripts": {
+            "package.json": {
               "path": "package.json",
               "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
               "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
-              "jsonKey": {
-                "key": "scripts",
-                "hash": "9e1a4e4bf3a6bb65513545cd2424c565c6465d9c",
-                "value": "{\"test\":\"node --test\"}"
+              "range": {
+                "start": 15,
+                "end": 15,
+                "hash": "d8ddd3c8b69e0ab01ce8757e58c5094574634b87"
               }
             }
           }
@@ -494,7 +494,7 @@
             "scripts/release.mjs:1-12",
             "scripts/release.mjs:33-35"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "scripts/release.mjs": {
               "path": "scripts/release.mjs",
@@ -524,7 +524,7 @@
           "specs": [
             "scripts/make-hero.mjs:1-4"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "scripts/make-hero.mjs": {
               "path": "scripts/make-hero.mjs",
@@ -545,7 +545,7 @@
             "dossier-scribe.json",
             ".github/workflows/upkeep.yml:62-70"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "dossier-scribe.json": {
               "path": "dossier-scribe.json",
@@ -569,9 +569,9 @@
           "line": 26,
           "specs": [
             "CONTRIBUTING.md:7",
-            "package.json#engines.node"
+            "package.json:14"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -583,14 +583,14 @@
                 "hash": "1eb6f2529d897e07ccc1aaf19409ca35063e229e"
               }
             },
-            "package.json#engines.node": {
+            "package.json": {
               "path": "package.json",
               "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
               "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
-              "jsonKey": {
-                "key": "engines.node",
-                "hash": "02bc192b69d35e23c1375adfa8377c787dc525d5",
-                "value": "\">=22\""
+              "range": {
+                "start": 14,
+                "end": 14,
+                "hash": "67a4ba2e9f1db54928caa00e148ef448613104e4"
               }
             }
           }
@@ -601,7 +601,7 @@
           "specs": [
             "CONTRIBUTING.md:8"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -621,7 +621,7 @@
           "specs": [
             "CONTRIBUTING.md:9"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -641,7 +641,7 @@
           "specs": [
             "CONTRIBUTING.md:10"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -665,7 +665,7 @@
             "src/util.mjs:1-5",
             "test-support/helpers.mjs:1-2"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -721,7 +721,7 @@
             "src/drills/command.mjs:5-16",
             "src/util.mjs:6-7"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/drills/command.mjs": {
               "path": "src/drills/command.mjs",
@@ -752,7 +752,7 @@
             "CONTRIBUTING.md:21-39",
             ".github/PULL_REQUEST_TEMPLATE.md"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "CONTRIBUTING.md": {
               "path": "CONTRIBUTING.md",
@@ -777,7 +777,7 @@
           "specs": [
             ".github/workflows/publish.yml:1-6"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             ".github/workflows/publish.yml": {
               "path": ".github/workflows/publish.yml",
@@ -798,7 +798,7 @@
             "test/hygiene.test.mjs:14-23",
             "test/hygiene.test.mjs:43-62"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "test/hygiene.test.mjs": {
               "path": "test/hygiene.test.mjs",
@@ -829,7 +829,7 @@
             "test/hygiene.test.mjs:41",
             "test/hygiene.test.mjs:67-86"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "test/hygiene.test.mjs": {
               "path": "test/hygiene.test.mjs",
@@ -861,7 +861,7 @@
             "src/cli.mjs:46-50",
             "test/hygiene.test.mjs:43-49"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             ".gitignore": {
               "path": ".gitignore",
@@ -897,7 +897,7 @@
             "src/config.mjs:12-28",
             "src/config.mjs:94"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/config.mjs": {
               "path": "src/config.mjs",
@@ -928,7 +928,7 @@
             "test/examples.test.mjs:11-15",
             "src/cli.mjs:135-143"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "test/examples.test.mjs": {
               "path": "test/examples.test.mjs",
@@ -959,7 +959,7 @@
             "src/runner.mjs:118-120",
             "src/steps.mjs:29-31"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -989,7 +989,7 @@
           "specs": [
             "src/runner.mjs:133-135"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1010,7 +1010,7 @@
             "src/drills/sqlite.mjs:5-16",
             "src/sqlite-worker.mjs:1-3"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/drills/sqlite.mjs": {
               "path": "src/drills/sqlite.mjs",
@@ -1042,7 +1042,7 @@
             "src/util.mjs:241-289",
             "src/runner.mjs:99-112"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/util.mjs": {
               "path": "src/util.mjs",
@@ -1084,7 +1084,7 @@
             ".github/rulesets/main.json:13-20",
             ".github/workflows/dependabot-automerge.yml:1-4"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             ".github/workflows/ci.yml": {
               "path": ".github/workflows/ci.yml",
@@ -1125,7 +1125,7 @@
             ".github/workflows/publish.yml:21-25",
             ".github/workflows/publish.yml:51-62"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             ".github/workflows/publish.yml": {
               "path": ".github/workflows/publish.yml",
@@ -1158,7 +1158,7 @@
             "test/kit.test.mjs:179",
             ".github/workflows/ci.yml:32-33"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "test/steps.test.mjs": {
               "path": "test/steps.test.mjs",
@@ -1201,10 +1201,30 @@
               }
             }
           }
+        },
+        "401102b4a419": {
+          "text": "Cite `package.json` by line, not `#key`. `upkeep.yml` installs `dossier-scribe` v0.1.0, and its `lint` rejects `#key` specs as paths that do not exist. Bump ...",
+          "line": 49,
+          "specs": [
+            ".github/workflows/upkeep.yml:62"
+          ],
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
+          "files": {
+            ".github/workflows/upkeep.yml": {
+              "path": ".github/workflows/upkeep.yml",
+              "blob": "8bfe01f5e552f692fa41c68c3f75f84697c98f5b",
+              "commit": "98c0b990300f062f23bc79c6a329dfc23145b2c7",
+              "range": {
+                "start": 62,
+                "end": 62,
+                "hash": "22280f11f460b954d6284c1d743a8ebafd44b3dd"
+              }
+            }
+          }
         }
       },
-      "pinnedAt": "2026-11-22T10:05:28.868Z",
-      "head": "be74313ced2a3aa08c284c812106c3953a9d8f26"
+      "pinnedAt": "2026-11-22T10:05:58.498Z",
+      "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629"
     },
     "restore-drill-architecture": {
       "claims": {
@@ -1212,30 +1232,30 @@
           "text": "A zero-dependency Node 22 command line tool in ES modules. It runs as a short-lived process, with no daemon and no server. Each run reads a JSON config, rest...",
           "line": 11,
           "specs": [
-            "package.json#engines.node",
-            "package.json#type",
+            "package.json:14",
+            "package.json:5",
             "README.md:5"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
-            "package.json#engines.node": {
+            "package.json": {
               "path": "package.json",
               "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
               "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
-              "jsonKey": {
-                "key": "engines.node",
-                "hash": "02bc192b69d35e23c1375adfa8377c787dc525d5",
-                "value": "\">=22\""
+              "range": {
+                "start": 14,
+                "end": 14,
+                "hash": "67a4ba2e9f1db54928caa00e148ef448613104e4"
               }
             },
-            "package.json#type": {
+            "package.json:5-5": {
               "path": "package.json",
               "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
               "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
-              "jsonKey": {
-                "key": "type",
-                "hash": "104552135e0a03cc60690d55ea338c29215ae902",
-                "value": "\"module\""
+              "range": {
+                "start": 5,
+                "end": 5,
+                "hash": "6b20364cff17e00412a508066e482091edd1181d"
               }
             },
             "README.md": {
@@ -1256,7 +1276,7 @@
           "specs": [
             "bin/restore-drill.mjs"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "bin/restore-drill.mjs": {
               "path": "bin/restore-drill.mjs",
@@ -1273,7 +1293,7 @@
             "src/cli.mjs:73-96",
             "src/cli.mjs:175-186"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -1315,7 +1335,7 @@
             "src/config.mjs:94",
             "src/config.mjs:138-139"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/config.mjs": {
               "path": "src/config.mjs",
@@ -1357,7 +1377,7 @@
             "src/runner.mjs:99-112",
             "src/runner.mjs:114-136"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1397,7 +1417,7 @@
           "specs": [
             "src/runner.mjs:14"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1419,7 +1439,7 @@
             "src/steps.mjs:11-38",
             "src/steps.mjs:55-118"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/steps.mjs": {
               "path": "src/steps.mjs",
@@ -1459,7 +1479,7 @@
           "specs": [
             "src/sqlite-worker.mjs:1-3"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/sqlite-worker.mjs": {
               "path": "src/sqlite-worker.mjs",
@@ -1483,7 +1503,7 @@
             "src/util.mjs:206-221",
             "src/util.mjs:241-289"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/util.mjs": {
               "path": "src/util.mjs",
@@ -1543,7 +1563,7 @@
           "specs": [
             "src/history.mjs:4-49"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/history.mjs": {
               "path": "src/history.mjs",
@@ -1563,7 +1583,7 @@
           "specs": [
             "src/notify.mjs:1-46"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/notify.mjs": {
               "path": "src/notify.mjs",
@@ -1584,7 +1604,7 @@
             "src/report.mjs:82-110",
             "src/demo.mjs:54-105"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/report.mjs": {
               "path": "src/report.mjs",
@@ -1614,9 +1634,9 @@
           "specs": [
             "scripts/release.mjs:1-12",
             "scripts/make-hero.mjs:1-4",
-            "package.json#files"
+            "package.json:13"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "scripts/release.mjs": {
               "path": "scripts/release.mjs",
@@ -1638,14 +1658,14 @@
                 "hash": "97ed85663861cb17d396172f271275dcaa8a2c98"
               }
             },
-            "package.json#files": {
+            "package.json": {
               "path": "package.json",
               "blob": "da076dc5789ccca84ce6576511366c0fcedf7d0f",
               "commit": "69fb3f7a077e2a83cd8733e6d860b82eb8e915ca",
-              "jsonKey": {
-                "key": "files",
-                "hash": "d73dd630ca951f2806456923f3a68f0df61e61a9",
-                "value": "[\"bin\",\"src\",\"examples\",\"docs\",\"LICENSE\",\"README.md\",\"CHANGELOG.md\"]"
+              "range": {
+                "start": 13,
+                "end": 13,
+                "hash": "d7b581b08f869b6b80d0726c5fd208fb0ad9b521"
               }
             }
           }
@@ -1657,7 +1677,7 @@
             "src/cli.mjs:73-91",
             "src/runner.mjs:114-117"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -1688,7 +1708,7 @@
             "src/runner.mjs:27-37",
             "src/util.mjs:206-211"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1719,7 +1739,7 @@
             "src/steps.mjs:11-38",
             "src/util.mjs:153-166"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/steps.mjs": {
               "path": "src/steps.mjs",
@@ -1754,7 +1774,7 @@
             "src/drills/pg_dump.mjs:79-95",
             "src/drills/command.mjs:5-16"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/steps.mjs": {
               "path": "src/steps.mjs",
@@ -1827,7 +1847,7 @@
             "src/runner.mjs:15",
             "src/runner.mjs:124"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1878,7 +1898,7 @@
             "src/runner.mjs:130-135",
             "src/notify.mjs:18-46"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/runner.mjs": {
               "path": "src/runner.mjs",
@@ -1908,7 +1928,7 @@
           "specs": [
             "src/cli.mjs:98-133"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -1930,7 +1950,7 @@
             "src/history.mjs:25-28",
             "src/cli.mjs:46-50"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/history.mjs": {
               "path": "src/history.mjs",
@@ -1970,7 +1990,7 @@
           "specs": [
             "src/history.mjs:20"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/history.mjs": {
               "path": "src/history.mjs",
@@ -1991,7 +2011,7 @@
             "src/util.mjs:206-220",
             "src/runner.mjs:50-54"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/util.mjs": {
               "path": "src/util.mjs",
@@ -2021,7 +2041,7 @@
           "specs": [
             "src/cli.mjs:126-143"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -2042,7 +2062,7 @@
             "src/cli.mjs",
             "src/notify.mjs"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/cli.mjs": {
               "path": "src/cli.mjs",
@@ -2065,7 +2085,7 @@
             "src/drills/pg_dump.mjs:20-24",
             "src/notify.mjs:3-14"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/util.mjs": {
               "path": "src/util.mjs",
@@ -2124,7 +2144,7 @@
             "src/drills/command.mjs:11",
             "src/util.mjs:276-277"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/drills/tar.mjs": {
               "path": "src/drills/tar.mjs",
@@ -2234,7 +2254,7 @@
           "specs": [
             "src/drills/restic.mjs:6-23"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/drills/restic.mjs": {
               "path": "src/drills/restic.mjs",
@@ -2254,7 +2274,7 @@
           "specs": [
             "src/drills/pg_dump.mjs:7-18"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/drills/pg_dump.mjs": {
               "path": "src/drills/pg_dump.mjs",
@@ -2276,7 +2296,7 @@
             "src/config.mjs:160-169",
             "src/notify.mjs:1-14"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "src/config.mjs": {
               "path": "src/config.mjs",
@@ -2318,7 +2338,7 @@
             ".github/workflows/publish.yml:7-15",
             ".github/workflows/publish.yml:51-90"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             "scripts/release.mjs": {
               "path": "scripts/release.mjs",
@@ -2362,7 +2382,7 @@
             ".github/workflows/upkeep.yml:25-32",
             ".github/workflows/upkeep.yml:62-70"
           ],
-          "head": "be74313ced2a3aa08c284c812106c3953a9d8f26",
+          "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629",
           "files": {
             ".github/workflows/ci.yml": {
               "path": ".github/workflows/ci.yml",
@@ -2417,8 +2437,8 @@
           }
         }
       },
-      "pinnedAt": "2026-11-22T10:05:28.954Z",
-      "head": "be74313ced2a3aa08c284c812106c3953a9d8f26"
+      "pinnedAt": "2026-11-22T10:05:49.781Z",
+      "head": "e121ac7bdf3bd9e36b17a4252377cc3ff48c4629"
     }
   }
 }

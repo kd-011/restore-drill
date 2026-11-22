@@ -13,17 +13,17 @@ The doc index is docs/README.md. Read docs/ARCHITECTURE.md before changing struc
 ## Commands
 
 - Install: nothing to install, the package has no dependencies. <!-- src: package.json -->
-- Test everything: `node --test`. <!-- src: package.json#scripts.test -->
+- Test everything: `node --test`. <!-- src: package.json:15 -->
 - Test one file while working: `node --test test/sqlite.test.mjs`. <!-- src: CONTRIBUTING.md:13-17 -->
 - Run the CLI from the checkout: `node bin/restore-drill.mjs <run|status|report|init|demo>`. `demo` builds fake backups in a temp dir and exits 1 on purpose. <!-- src: bin/restore-drill.mjs, src/cli.mjs:35-41, src/demo.mjs:54-105 -->
-- There is no lint, format or typecheck script. <!-- src: package.json#scripts -->
+- There is no lint, format or typecheck script. <!-- src: package.json:15 -->
 - Dry-run the release plan without touching npm or GitHub: `node scripts/release.mjs plan --published 0.1.0,0.2.0 --release-exists false`. <!-- src: scripts/release.mjs:1-12, scripts/release.mjs:33-35 -->
 - Regenerate the README terminal image from a real demo run (needs a Chromium-family browser): `node scripts/make-hero.mjs`. <!-- src: scripts/make-hero.mjs:1-4 -->
 - Docs drift check: `dossier-scribe lint`, then `dossier-scribe check`, run from the repo root. `pin` after fixing claims. <!-- src: dossier-scribe.json, .github/workflows/upkeep.yml:62-70 -->
 
 ## Conventions
 
-- Node 22 or newer, ES modules, no npm dependencies. Use `node:` built-ins and call the real tools (`tar`, `age`, `restic`, `pg_restore`) rather than reimplementing them. <!-- src: CONTRIBUTING.md:7, package.json#engines.node -->
+- Node 22 or newer, ES modules, no npm dependencies. Use `node:` built-ins and call the real tools (`tar`, `age`, `restic`, `pg_restore`) rather than reimplementing them. <!-- src: CONTRIBUTING.md:7, package.json:14 -->
 - A drill only reads its source. Anything it writes goes in its temp dir, and the temp dir is always removed. A change that weakens either needs a test showing it does not. <!-- src: CONTRIBUTING.md:8 -->
 - Error text shown to the user is the tool's real error with secrets redacted. <!-- src: CONTRIBUTING.md:9 -->
 - Tests build real fixtures (a real SQLite file, a real tar.gz, a truncated one). Stub executables on `PATH` are fine for heavy tools such as `pg_restore`. <!-- src: CONTRIBUTING.md:10 -->
@@ -46,7 +46,13 @@ The doc index is docs/README.md. Read docs/ARCHITECTURE.md before changing struc
 - `ci.yml` job names are the required status checks in `.github/rulesets/main.json`. Renaming the matrix or the job leaves a required check that never reports. The Dependabot auto-merge workflow merges at once if the ruleset has no required check. <!-- src: .github/workflows/ci.yml:16-24, .github/rulesets/main.json:13-20, .github/workflows/dependabot-automerge.yml:1-4 -->
 - `publish.yml` runs on any push to `main` that touches `package.json`, so a version bump is a release. It ends green without publishing until the package is on npm or `NPM_TOKEN` is set. <!-- src: .github/workflows/publish.yml:21-25, .github/workflows/publish.yml:51-62 -->
 - Tests that need `age`, `restic`, `gpg`, `zstd`, `xz`, `zip` or `jq` skip when the binary is missing, so a green local run can skip drill types that CI exercises. <!-- src: test/steps.test.mjs:30, test/tar.test.mjs:94, test/kit.test.mjs:179, .github/workflows/ci.yml:32-33 -->
+- Cite `package.json` by line, not `#key`. `upkeep.yml` installs `dossier-scribe` v0.1.0, and its `lint` rejects `#key` specs as paths that do not exist. Bump the tag in a reviewed change before using them. <!-- src: .github/workflows/upkeep.yml:62 -->
 
 ## Unverified
 
-- Whether the `dossier-scribe` tag that `upkeep.yml` installs reads a lock written by a newer local `dossier-scribe`. Run the weekly job after changing the docs to find out.
+None.
+
+<!-- auto:start -->
+- package: restore-drill 0.2.0
+- npm scripts (1): test
+<!-- auto:end -->
