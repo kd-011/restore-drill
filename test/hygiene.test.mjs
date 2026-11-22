@@ -39,6 +39,8 @@ export function containsHashed(text, hashes) {
 
 // kd-011 in commits made locally. GitHub writes the profile's display name on web merges.
 const OWNER_NAMES = new Set(['kd-011', 'KD011']);
+// That display name, hashed for the same reason as NAME_HASHES. Accepted only with GitHub as committer.
+const WEB_MERGE_AUTHOR = '96c3dcc4b889b0ce24b3c0eac894b834b8200f0a14e499034056a62af209ad1f';
 
 function trackedTextFiles() {
   const r = git('ls-files', '-z', '--cached', '--others', '--exclude-standard');
@@ -67,7 +69,8 @@ test('no personal data or em dashes anywhere in the tree', { skip: !inRepo }, ()
 export function commitProblems({ an, ae, cn, body }) {
   const bot = an === 'dependabot[bot]';
   const problems = [];
-  if (!OWNER_NAMES.has(an) && !bot) problems.push(`author ${an}`);
+  const webMerge = cn === 'GitHub' && sha256(an) === WEB_MERGE_AUTHOR;
+  if (!OWNER_NAMES.has(an) && !bot && !webMerge) problems.push(`author ${an}`);
   if (!OWNER_NAMES.has(cn) && cn !== 'GitHub') problems.push(`committer ${cn}`);
   if (!bot && !/@users\.noreply\.github\.com$/.test(ae)) problems.push(`email ${ae}`);
   if (!bot && /claude|anthropic|co-authored-by|generated with/i.test(body)) problems.push('AI trailer');
@@ -89,6 +92,9 @@ test('commit identity rule: bots and web merges pass, anyone else does not', () 
   assert.deepEqual(commitProblems(ok), []);
   assert.deepEqual(commitProblems({ ...ok, an: 'KD011', cn: 'KD011' }), []);
   assert.deepEqual(commitProblems({ ...ok, cn: 'GitHub' }), []);
+  const displayName = ['Ky', 'le D'].join('');
+  assert.deepEqual(commitProblems({ ...ok, an: displayName, cn: 'GitHub' }), []);
+  assert.notDeepEqual(commitProblems({ ...ok, an: displayName, cn: displayName }), []);
   assert.deepEqual(commitProblems({ an: 'dependabot[bot]', ae: 'x@users.noreply.github.com', cn: 'GitHub', body: `notes ${EM_DASH}` }), []);
   assert.notDeepEqual(commitProblems({ ...ok, an: 'Someone Else' }), []);
   assert.notDeepEqual(commitProblems({ ...ok, ae: 'person@example.com' }), []);
